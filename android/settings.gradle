@@ -1,0 +1,3 @@
+rootProject.name = 'ProjetoPI'
+
+include ':app'
