@@ -30,6 +30,7 @@ import questao8 from './components/questao8.js';
 import questao9 from './components/questao9.js';
 import questao10 from './components/questao10.js';
 import resultados from './components/resultados.js';
+import menu from './components/menu.js';
 
 
 type Props = {};
@@ -43,7 +44,7 @@ export default class App extends Component<Props> {
       <ImageBackground source={require('./img/bg_principal.png')}
                     style={[styles.container,{width:"100%", height:"100%"}]}>
       
-      <TouchableOpacity style={styles.button} onPress={()=> navigate('questoes')}>
+      <TouchableOpacity style={styles.button} onPress={()=> navigate('menu')}>
                 <Text style={styles.texto}>
                 Iniciar
                 </Text>
@@ -94,7 +95,8 @@ const tela = StackNavigator({
     questao8: {screen: questao8},
     questao9: {screen: questao9},
     questao10: {screen: questao10},
-    resultados: {screen: resultados}
+    resultados: {screen: resultados},
+    menu: {screen: menu},
 })
 
 AppRegistry.registerComponent('ProjetoPI', () => tela);
