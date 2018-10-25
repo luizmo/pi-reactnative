@@ -29,6 +29,8 @@ import questao7 from './components/questao7.js';
 import questao8 from './components/questao8.js';
 import questao9 from './components/questao9.js';
 import questao10 from './components/questao10.js';
+import questao11 from './components/questao11.js';
+import questao12 from './components/questao12.js';
 import resultados from './components/resultados.js';
 import menu from './components/menu.js';
 
@@ -95,6 +97,8 @@ const tela = StackNavigator({
     questao8: {screen: questao8},
     questao9: {screen: questao9},
     questao10: {screen: questao10},
+    questao11: {screen: questao11},
+    questao12: {screen: questao12},
     resultados: {screen: resultados},
     menu: {screen: menu},
 })
