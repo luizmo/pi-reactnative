@@ -10,6 +10,7 @@ import questao9 from './questao9';
 import questao10 from './questao10';
 import questao11 from './questao11';
 import questao12 from './questao12';
+import questao13 from './questao13';
 import resultados from './resultados';
 
-export default { questoes, questao2, questao3, questao4, questao5, questao6, questao7, questao8, questao9 ,questao10, questao11, questao12, resultados }
+export default { questoes, questao2, questao3, questao4, questao5, questao6, questao7, questao8, questao9 ,questao10, questao11, questao12, questao13, resultados }

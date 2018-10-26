@@ -31,6 +31,7 @@ import questao9 from './components/questao9.js';
 import questao10 from './components/questao10.js';
 import questao11 from './components/questao11.js';
 import questao12 from './components/questao12.js';
+import questao13 from './components/questao13.js';
 import resultados from './components/resultados.js';
 import menu from './components/menu.js';
 
@@ -48,7 +49,7 @@ export default class App extends Component<Props> {
       
       <TouchableOpacity style={styles.button} onPress={()=> navigate('menu')}>
                 <Text style={styles.texto}>
-                Iniciar
+                  Iniciar
                 </Text>
       </TouchableOpacity>  
 
@@ -79,7 +80,7 @@ const styles = StyleSheet.create({
     },
     texto:{
       textAlign:"center",
-      fontSize:25,
+      fontSize:20,
       color:"purple",
     }
     
@@ -99,6 +100,7 @@ const tela = StackNavigator({
     questao10: {screen: questao10},
     questao11: {screen: questao11},
     questao12: {screen: questao12},
+    questao13: {screen: questao13},
     resultados: {screen: resultados},
     menu: {screen: menu},
 })

@@ -19,17 +19,17 @@ import {
   AppRegistry
 } from 'react-native';
 import {StackNavigator} from 'react-navigation';
-import questao12 from './questao12';
+import resultados from './resultados';
 
 
 type Props = {};
 export default class questao11 extends Component<Props> {
   static navigationOptions = {
-    title:'questao11',
+    title:'questao13',
   }
     constructor(props){
     super(props)
-    this.state = {numero11:this.props.navigation.state.params.numero10}
+    this.state = {numero13:this.props.navigation.state.params.numero12}
 }
   render() {
     const {navigate} = this.props.navigation;
@@ -38,27 +38,27 @@ export default class questao11 extends Component<Props> {
                     style={[styles.container,{width:"100%", height:"100%"}]}>
       <View style={styles.pergunta}>
         <Text style={styles.texto}>
-          Qual desses objetos é usado para observar o espaço sideral?
+          Qual desses objetos é usado para medir coisas?
         </Text>
     
       </View>
       <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao12', {numero11:this.state.numero11 + 0})}>
-                <Image  style={styles.imagem} source={require('../img/atividade11/binoculos.jpg')} />
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados', {numero13:this.state.numero13 + 1})}>
+                <Image  style={styles.imagem} source={require('../img/atividade13/regua.jpg')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao12', {numero11:this.state.numero11 + 0})}>
-                <Image style={styles.imagem} source={require('../img/atividade11/lupa.jpg')} />
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados', {numero13:this.state.numero13 + 0})}>
+                <Image style={styles.imagem} source={require('../img/atividade13/borracha.jpg')} />
           </TouchableOpacity>
       </View>
 
       <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao12', {numero11:this.state.numero11 + 1})}>
-                <Image style={styles.imagem} source={require('../img/atividade11/telescopio.jpg')} />
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados', {numero13:this.state.numero13 + 0})}>
+                <Image style={styles.imagem} source={require('../img/atividade13/lapis.jpg')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao12', {numero11:this.state.numero11 + 0})}>
-                <Image style={styles.imagem} source={require('../img/atividade11/microscopio.png')} />
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados', {numero13:this.state.numero13 + 0})}>
+                <Image style={styles.imagem} source={require('../img/atividade13/apontador.jpg')} />
           </TouchableOpacity>
       </View>
       </ImageBackground>  

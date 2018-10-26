@@ -19,11 +19,11 @@ import {
   AppRegistry
 } from 'react-native';
 import {StackNavigator} from 'react-navigation';
-import resultados from './resultados';
+import questao13 from './questao13';
 
 
 type Props = {};
-export default class questao12 extends Component<Props> {
+export default class questao11 extends Component<Props> {
   static navigationOptions = {
     title:'questao12',
   }
@@ -38,26 +38,26 @@ export default class questao12 extends Component<Props> {
                     style={[styles.container,{width:"100%", height:"100%"}]}>
       <View style={styles.pergunta}>
         <Text style={styles.texto}>
-          Qual desses objetos é usado para observar o espaço sideral?
+          Qual desses objetos é usado em uma partida de futebol?
         </Text>
     
       </View>
       <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados', {numero12:this.state.numero12 + 0})}>
-                <Image  style={styles.imagem} source={require('../img/atividade12/raquete.jpg')} />
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao13', {numero12:this.state.numero12 + 0})}>
+                <Image  style={styles.imagem} source={require('../img/atividade12/baseball.png')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados', {numero12:this.state.numero12 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao13', {numero12:this.state.numero12 + 0})}>
                 <Image style={styles.imagem} source={require('../img/atividade12/basquete.jpg')} />
           </TouchableOpacity>
       </View>
 
       <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados', {numero12:this.state.numero12 + 0})}>
-                <Image style={styles.imagem} source={require('../img/atividade12/baseball.png')} />
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao13', {numero12:this.state.numero12 + 0})}>
+                <Image style={styles.imagem} source={require('../img/atividade12/raquete.jpg')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados', {numero12:this.state.numero12 + 1})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao13', {numero12:this.state.numero12 + 1})}>
                 <Image style={styles.imagem} source={require('../img/atividade12/chuteira.jpg')} />
           </TouchableOpacity>
       </View>
@@ -80,15 +80,16 @@ const styles = StyleSheet.create({
       marginLeft: "8%",
       borderWidth:4,
       borderColor:"purple",
+      padding:10
     },
     texto: {
-      fontSize: 35,
+      fontSize: 25,
       textAlign: "center",
       color:'purple',
     },
     icones: {
-      width: "40%",
-      height: "90%",
+      width: "48%",
+      height: "75%",
       borderStyle:"solid",
     },
     imagem: {
