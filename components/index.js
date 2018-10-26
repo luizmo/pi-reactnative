@@ -12,5 +12,6 @@ import questao11 from './questao11';
 import questao12 from './questao12';
 import questao13 from './questao13';
 import resultados from './resultados';
+import menu from './menu';
 
-export default { questoes, questao2, questao3, questao4, questao5, questao6, questao7, questao8, questao9 ,questao10, questao11, questao12, questao13, resultados }
+export{ menu, questoes, questao2, questao3, questao4, questao5, questao6, questao7, questao8, questao9, questao10, questao11, questao12, questao13, resultados }
