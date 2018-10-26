@@ -4,9 +4,7 @@ import {StackNavigator} from 'react-navigation';
 import { questoes, questao2, questao3, questao4, questao5, questao6, questao7,
   questao8, questao9, questao10, questao11, questao12, questao13, resultados, menu } from './components';
 
-
-type Props = {};
-export default class App extends Component<Props> {
+class App extends Component{
   static navigationOptions = {
     title:'Home',
   };
@@ -26,6 +24,7 @@ export default class App extends Component<Props> {
     );
   }
 }
+export default App;
 
 const styles = StyleSheet.create({
     container: {
