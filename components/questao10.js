@@ -47,6 +47,8 @@ class questao10 extends Component{
   }
 }
 
+export default questao10;
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,

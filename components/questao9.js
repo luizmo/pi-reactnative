@@ -46,6 +46,7 @@ class questao9 extends Component{
     );
   }
 }
+export default questao9;
 
 const styles = StyleSheet.create({
   container: {
