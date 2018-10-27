@@ -1,25 +1,22 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, TextInput, ImageBackground, TouchableOpacity, Image, AppRegistry } from 'react-native';
-import {StackNavigator} from 'react-navigation';
+import { StackNavigator } from 'react-navigation';
 import { questoes, questao2, questao3, questao4, questao5, questao6, questao7,
-  questao8, questao9, questao10, questao11, questao12, questao13, questao14, questao15, questao16, questao17, resultados, menu } from './components';
+  questao8, questao9, questao10, questao11, questao12, questao13, resultados, menu } from './components';
 
 class App extends Component{
   static navigationOptions = {
     title:'Home',
   };
   render() {
-    const {navigate} = this.props.navigation;
+    const { navigate } = this.props.navigation;
     return (
-      <ImageBackground source={require('./img/bg_principal.png')}
-                    style={[styles.container,{width:"100%", height:"100%"}]}>
-
-      <TouchableOpacity style={styles.button} onPress={()=> navigate('menu')}>
-                <Text style={styles.texto}>
-                  Iniciar
-                </Text>
-      </TouchableOpacity>
-
+      <ImageBackground source={require('./img/bg_principal.png')} style={[styles.container,{width:"100%", height:"100%"}]}>
+        <TouchableOpacity style={styles.button} onPress={()=> navigate('menu')}>
+          <Text style={styles.texto}>
+            Iniciar
+          </Text>
+        </TouchableOpacity>
       </ImageBackground>
     );
   }
@@ -32,6 +29,7 @@ const styles = StyleSheet.create({
       flexDirection:"row",
       justifyContent:"center",
       alignItems:"flex-end",
+
     },
     button:{
       marginBottom:"10%",
@@ -69,10 +67,6 @@ const tela = StackNavigator({
     questao11: {screen: questao11},
     questao12: {screen: questao12},
     questao13: {screen: questao13},
-    questao14: {screen: questao14},
-    questao15: {screen: questao15},
-    questao16: {screen: questao16},
-    questao17: {screen: questao17},
     resultados: {screen: resultados},
     menu: {screen: menu},
 })
