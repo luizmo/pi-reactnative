@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, TextInput, ImageBackground, TouchableOpacity, Image, AppRegistry } from 'react-native';
 import { StackNavigator } from 'react-navigation';
-import questao2 from './questao2.js';
+import questao2 from '.';
 
 class questoes extends Component{
   static navigationOptions = {
@@ -84,5 +84,5 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "row",
     justifyContent: "space-between",
-  }  
+  }
 });

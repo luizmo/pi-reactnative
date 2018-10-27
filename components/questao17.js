@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, TextInput, ImageBackground, TouchableOpacity, I
 import { StackNavigator } from 'react-navigation';
 import resultados from './resultados';
 
-class questao11 extends Component<Props> {
+class questao11 extends Component{
   static navigationOptions = {
     title:'questao17',
   }

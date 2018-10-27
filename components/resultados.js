@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, TextInput, ImageBackground, TouchableOpacity, Image } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
-
-class resultados extends Component<Props> {
+class resultados extends Component{
   static navigationOptions = {
     title:'resultados',
   }
@@ -57,5 +56,5 @@ const styles = StyleSheet.create({
   icones: {
     width: "48%",
     height: "65%",
-  }  
+  }
 });

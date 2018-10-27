@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, TextInput, ImageBackground, TouchableOpacity, Image, AppRegistry } from 'react-native';
 import { StackNavigator } from 'react-navigation';
-import resultados from './resultados.js';
+import resultados from '.';
 
 class questao10 extends Component{
   static navigationOptions = {
