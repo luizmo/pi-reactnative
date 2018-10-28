@@ -22,21 +22,21 @@ class questao11 extends Component{
         </View>
         <View style={styles.alternativas}>
           <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao12', {numero11:this.state.numero11 + 0})}>
-            <Image  style={styles.imagem} source={require('../img/atividade11/binoculos.jpg')} />
+            <Image  style={styles.imagem} source={require('../img/atividades-6-7/atividade11/binoculos.jpg')} />
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao12', {numero11:this.state.numero11 + 0})}>
-            <Image style={styles.imagem} source={require('../img/atividade11/lupa.jpg')} />
+            <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade11/lupa.jpg')} />
           </TouchableOpacity>
         </View>
 
         <View style={styles.alternativas}>
           <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao12', {numero11:this.state.numero11 + 1})}>
-            <Image style={styles.imagem} source={require('../img/atividade11/telescopio.jpg')} />
+            <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade11/telescopio.jpg')} />
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao12', {numero11:this.state.numero11 + 0})}>
-            <Image style={styles.imagem} source={require('../img/atividade11/microscopio.png')} />
+            <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade11/microscopio.png')} />
           </TouchableOpacity>
         </View>
       </ImageBackground>

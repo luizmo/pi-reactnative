@@ -22,21 +22,21 @@ class questao4 extends Component{
         </View>
         <View style={styles.alternativas}>
             <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao5', {numero4:this.state.numero4 + 0})}>
-              <Image  style={styles.imagem} source={require('../img/atividade4/m.jpg')} />
+              <Image  style={styles.imagem} source={require('../img/atividades-6-7/atividade4/m.jpg')} />
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao5', {numero4:this.state.numero4 + 1})}>
-              <Image style={styles.imagem} source={require('../img/atividade4/n.jpg')} />
+              <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade4/n.jpg')} />
             </TouchableOpacity>
         </View>
 
         <View style={styles.alternativas}>
             <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao5', {numero4:this.state.numero4 + 0})}>
-              <Image style={styles.imagem} source={require('../img/atividade4/o.jpg')} />
+              <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade4/o.jpg')} />
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao5', {numero4:this.state.numero4 + 0})}>
-              <Image style={styles.imagem} source={require('../img/atividade4/p.jpg')} />
+              <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade4/p.jpg')} />
             </TouchableOpacity>
         </View>
       </ImageBackground>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, TextInput, ImageBackground, TouchableOpacity, Image, AppRegistry } from 'react-native';
 import { StackNavigator } from 'react-navigation';
-import resultados from '.';
+import questao11 from '.';
 
 class questao10 extends Component{
   static navigationOptions = {
@@ -20,26 +20,26 @@ class questao10 extends Component{
             Toque na resposta certa.
           </Text>
           <View>
-            <Image source={require('../img/atividade10/p4.jpg')} />
+            <Image source={require('../img/atividades-6-7/atividade10/p4.jpg')} />
           </View>
         </View>
         <View style={styles.alternativas}>
           <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao11', {numero10:this.state.numero10 + 0})}>
-            <Image  style={styles.imagem} source={require('../img/atividade10/mm.jpg')} />
+            <Image  style={styles.imagem} source={require('../img/atividades-6-7/atividade10/mm.jpg')} />
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao11', {numero10:this.state.numero10 + 1})}>
-            <Image style={styles.imagem} source={require('../img/atividade10/nn.jpg')} />
+            <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade10/nn.jpg')} />
           </TouchableOpacity>
         </View>
 
         <View style={styles.alternativas}>
           <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao11', {numero10:this.state.numero10 + 0})}>
-            <Image style={styles.imagem} source={require('../img/atividade10/oo.jpg')} />
+            <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade10/oo.jpg')} />
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao11', {numero10:this.state.numero10 + 0})}>
-            <Image style={styles.imagem} source={require('../img/atividade10/pp.jpg')} />
+            <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade10/pp.jpg')} />
           </TouchableOpacity>
         </View>
       </ImageBackground>

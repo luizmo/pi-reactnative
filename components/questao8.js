@@ -20,26 +20,26 @@ class questao8 extends Component{
             Toque na resposta certa.
           </Text>
           <View>
-            <Image source={require('../img/atividade8/p2.jpg')} />
+            <Image source={require('../img/atividades-6-7/atividade8/p2.jpg')} />
           </View>
         </View>
         <View style={styles.alternativas}>
           <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao9', {numero8:this.state.numero8 + 0})}>
-            <Image  style={styles.imagem} source={require('../img/atividade8/dd.jpg')} />
+            <Image  style={styles.imagem} source={require('../img/atividades-6-7/atividade8/dd.jpg')} />
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao9', {numero8:this.state.numero8 + 0})}>
-            <Image style={styles.imagem} source={require('../img/atividade8/ee.jpg')} />
+            <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade8/ee.jpg')} />
           </TouchableOpacity>
         </View>
 
         <View style={styles.alternativas}>
           <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao9', {numero8:this.state.numero8 + 0})}>
-            <Image style={styles.imagem} source={require('../img/atividade8/ff.jpg')} />
+            <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade8/ff.jpg')} />
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao9', {numero8:this.state.numero8 + 1})}>
-            <Image style={styles.imagem} source={require('../img/atividade8/gg.jpg')} />
+            <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade8/gg.jpg')} />
           </TouchableOpacity>
         </View>
       </ImageBackground>

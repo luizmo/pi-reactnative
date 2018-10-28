@@ -13,9 +13,11 @@ export default class menu extends Component{
   render() {
     const {navigate} = this.props.navigation;
     return (
-      <ImageBackground source={require('../img/bg_menu.png') style={[styles.container,{width:"100%", height:"100%"}]}>
-        <View style={styles.opcoes}>
-          <TouchableOpacity style={[styles.button,{marginTop:"40%"}]}  onPress={()=> navigate('questao20')}>
+      <ImageBackground source={require('../img/bg_menu.png')} style={[styles.container,{width:"100%", height:"100%"}]}>
+       
+       <View style={styles.opcoes}>
+          <TouchableOpacity style={[styles.button,{marginTop:"40%"}]}  onPress={()=> navigate('questao21')}>
+              
               <Text style={styles.texto}>
                 4 e 5 anos
               </Text>

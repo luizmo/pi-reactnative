@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, TextInput, ImageBackground, TouchableOpacity, Image, AppRegistry } from 'react-native';
 import { StackNavigator } from 'react-navigation';
-import resultados from './resultados';
+import resultados from '.';
 
 class questao17 extends Component{
   static navigationOptions = {
@@ -22,21 +22,21 @@ class questao17 extends Component{
         </View>
         <View style={styles.alternativas}>
           <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados', {numero17:this.state.numero17 + 1})}>
-            <Image  style={styles.imagem} source={require('../img/atividade17/quatro.jpg')} />
+            <Image  style={styles.imagem} source={require('../img/atividades-6-7/atividade17/quatro.jpg')} />
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados', {numero17:this.state.numero17 + 0})}>
-            <Image style={styles.imagem} source={require('../img/atividade17/tres.jpg')} />
+            <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade17/tres.jpg')} />
           </TouchableOpacity>
         </View>
 
         <View style={styles.alternativas}>
           <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados', {numero17:this.state.numero17 + 0})}>
-            <Image style={styles.imagem} source={require('../img/atividade17/dois.jpg')} />
+            <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade17/dois.jpg')} />
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados', {numero17:this.state.numero17 + 0})}>
-            <Image style={styles.imagem} source={require('../img/atividade17/um.jpg')} />
+            <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade17/um.jpg')} />
           </TouchableOpacity>
         </View>
       </ImageBackground>

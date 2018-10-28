@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, TextInput, ImageBackground, TouchableOpacity, Image, AppRegistry } from 'react-native';
 import { StackNavigator } from 'react-navigation';
-import questao26 from '.';
+import resultados from '.';
 
 class questao25 extends Component{
   static navigationOptions = {
@@ -21,21 +21,21 @@ class questao25 extends Component{
           </Text>
         </View>
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao26', {numero2:this.state.numero2 + 1})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados', {numero2:this.state.numero2 + 1})}>
             <Image  style={styles.imagem} source={require('../img/atividades-3-4/cobra.png')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao26', {numero2:this.state.numero2 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados', {numero2:this.state.numero2 + 0})}>
             <Image style={styles.imagem} source={require('../img/atividades-3-4/cao.png')} />
           </TouchableOpacity>
         </View>
 
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao26', {numero2:this.state.numero2 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados', {numero2:this.state.numero2 + 0})}>
             <Image style={styles.imagem} source={require('../img/atividades-3-4/galinha.png')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao26', {numero2:this.state.numero2 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados', {numero2:this.state.numero2 + 0})}>
             <Image style={styles.imagem} source={require('../img/atividades-3-4/peixe.png')} />
           </TouchableOpacity>
         </View>
