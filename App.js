@@ -90,4 +90,4 @@ const tela = StackNavigator({
     menu: {screen: menu},
 })
 
-AppRegistry.registerComponent('Professor Lew', () => tela);
+AppRegistry.registerComponent('ProjetoPI', () => tela);
