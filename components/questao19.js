@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, TextInput, ImageBackground, TouchableOpacity, Image, AppRegistry } from 'react-native';
 import { StackNavigator } from 'react-navigation';
-import questao18 from '.';
+import questao20 from '.';
 
-class questao17 extends Component{
+class questao19 extends Component{
   static navigationOptions = {
-    title:'questao17',
+    title:'questao19',
   }
   constructor(props){
     super(props)
-    this.state = { numero17:this.props.navigation.state.params.numero16 }
+    this.state = { numero19:this.props.navigation.state.params.numero18 }
   }
   render() {
     const { navigate } = this.props.navigation;
@@ -17,33 +17,36 @@ class questao17 extends Component{
       <ImageBackground source={require('../img/bg_secu.png')} style={[styles.container,{width:"100%", height:"100%"}]}>
         <View style={styles.pergunta}>
           <Text style={styles.texto}>
-            Quantos números existem antes do numero 4?
+          Quantos números, dos apresentados a seguir, são menores que 10?
           </Text>
+          <View>
+            <Image source={require('../img/atividades-6-7/atividade19/menores_8.jpg')} />
+          </View>
         </View>
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao18', {numero17:this.state.numero17 + 1})}>
-            <Image  style={styles.imagem} source={require('../img/atividades-6-7/atividade17/quatro.jpg')} />
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao20', {numero19:this.state.numero19 + 0})}>
+            <Image  style={styles.imagem} source={require('../img/atividades-6-7/atividade19/quatro.jpg')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao18', {numero17:this.state.numero17 + 0})}>
-            <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade17/tres.jpg')} />
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao20', {numero19:this.state.numero19 + 0})}>
+            <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade19/um.jpg')} />
           </TouchableOpacity>
         </View>
 
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao18', {numero17:this.state.numero17 + 0})}>
-            <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade17/dois.jpg')} />
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao20', {numero19:this.state.numero19 + 0})}>
+            <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade19/dois.jpg')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao18', {numero17:this.state.numero17 + 0})}>
-            <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade17/um.jpg')} />
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao20', {numero19:this.state.numero19 + 1})}>
+            <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade19/tres.jpg')} />
           </TouchableOpacity>
         </View>
       </ImageBackground>
     );
   }
 }
-export default questao17;
+export default questao19;
 const styles = StyleSheet.create({
   container: {
     flex: 1,

@@ -15,6 +15,9 @@ import questao14 from './questao14';
 import questao15 from './questao15';
 import questao16 from './questao16';
 import questao17 from './questao17';
+import questao18 from './questao18';
+import questao19 from './questao19';
+import questao20 from './questao20';
 import questao21 from './questao21';
 import questao22 from './questao22';
 import questao23 from './questao23';
@@ -24,5 +27,5 @@ import resultados from './resultados';
 import menu from './menu';
 
 export{ menu, questoes, questao2, questao3, questao4, questao5, questao6, questao7, questao8, questao9,
-  questao10, questao11, questao12, questao13, questao14, questao15,questao16, questao17, questao21,
-  questao22, questao23, questao24, questao25, resultados }
+  questao10, questao11, questao12, questao13, questao14, questao15,questao16, questao17,questao18,
+  questao19, questao20, questao21, questao22, questao23, questao24, questao25, resultados }

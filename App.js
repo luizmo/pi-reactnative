@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, TextInput, ImageBackground, TouchableOpacity, I
 import { StackNavigator } from 'react-navigation';
 import { questoes, questao2, questao3, questao4, questao5, questao6, questao7,
   questao8, questao9, questao10, questao11, questao12, questao13, questao14, questao15, questao16, questao17,
-   questao21, questao22, questao23, questao24, questao25, resultados, menu } from './components';
+  questao18, questao19, questao20, questao21, questao22, questao23, questao24, questao25, resultados, menu } from './components';
 
 class App extends Component{
   static navigationOptions = {
@@ -72,6 +72,9 @@ const tela = StackNavigator({
     questao15: {screen: questao15},
     questao16: {screen: questao16},
     questao17: {screen: questao17},
+    questao18: {screen: questao18},
+    questao19: {screen: questao19},
+    questao20: {screen: questao20},
     questao21: {screen: questao21},
     questao22: {screen: questao22},
     questao23: {screen: questao23},
