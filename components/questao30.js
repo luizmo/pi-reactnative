@@ -33,11 +33,9 @@ class questao30 extends Component{
     const { navigate } = this.props.navigation;
     return (
       <ImageBackground source={require('../img/bg_secu.png')} style={[styles.container,{width:"100%", height:"100%"}]} onLoad={this.onPressButtonPlay.bind(this)}>
-        <View style={styles.pergunta}>
-          <Text style={styles.texto}>
-            Qual desses você usa pra dormir?
-          </Text>
-        </View>
+        <TouchableOpacity style={styles.play} onPress={this.onPressButtonPlay.bind(this)}>
+          <Image  style={styles.player} source={require('../img/player.png')} />
+        </TouchableOpacity>ew>
         <View style={styles.alternativas}>
           <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados2', {numero30:this.state.numero30 + 1})}>
             <Image  style={styles.imagem} source={require('../img/atividades-3-4/cama.png')} />
@@ -84,7 +82,7 @@ const styles = StyleSheet.create({
     color:"purple",
   },
   icones: {
-    width: "48%",
+    width: "46%",
     height: "65%",
     borderStyle:"solid",
   },
@@ -101,6 +99,17 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "row",
     justifyContent: "space-between",
-  }
+  },
+  player: {
+    width:"100%",
+    height:"100%"
+  },
+  play: {
+    width:"39%",
+    height:"39%",
+    flex: 1,
+    flexDirection: "row",
+    marginLeft:"28%"
+   }
 
 });
