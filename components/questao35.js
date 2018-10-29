@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, TextInput, ImageBackground, TouchableOpacity, Image, AppRegistry } from 'react-native';
 import { StackNavigator } from 'react-navigation';
-import resultados2 from '.';
+import questao36 from '.';
 
 var SoundPlayer = require('react-native-sound');
 var song = null;
@@ -33,32 +33,31 @@ class questao35 extends Component{
 
 
 
-
   render() {
     const { navigate } = this.props.navigation;
     return (
-      <ImageBackground source={require('../img/bg_secu.png')} style={[styles.container,{width:"100%", height:"100%"}]}>
+      <ImageBackground source={require('../img/bg_secu.png')} style={[styles.container,{width:"100%", height:"100%"}]} onLoad={this.onPressButtonPlay.bind(this)}>
         <TouchableOpacity style={styles.play} onPress={this.onPressButtonPlay.bind(this)}>
            <Image  style={styles.player} source={require('../img/player.png')} />
          </TouchableOpacity>
 
 
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados2', {numero35:this.state.numero35 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao36', {numero35:this.state.numero35 + 0})}>
             <Image  style={styles.imagem} source={require('../img/atividades-3-4/pentagano.jpg')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados2', {numero35:this.state.numero35 + 1})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao36', {numero35:this.state.numero35 + 1})}>
             <Image style={styles.imagem} source={require('../img/atividades-3-4/hexagano.jpg')} />
           </TouchableOpacity>
         </View>
 
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados2', {numero35:this.state.numero35 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao36', {numero35:this.state.numero35 + 0})}>
             <Image style={styles.imagem} source={require('../img/atividades-3-4/losango.jpg')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados2', {numero35:this.state.numero35 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao36', {numero35:this.state.numero35 + 0})}>
             <Image style={styles.imagem} source={require('../img/atividades-3-4/triangulo.jpg')} />
           </TouchableOpacity>
         </View>
@@ -90,6 +89,7 @@ const styles = StyleSheet.create({
   icones: {
     width: "48%",
     height: "65%",
+
     borderStyle:"solid",
   },
   imagem: {
@@ -103,6 +103,7 @@ const styles = StyleSheet.create({
     marginLeft: "10%",
     marginRight: "10%",
     flex: 1,
+
     flexDirection: "row",
     justifyContent: "space-between",
   },

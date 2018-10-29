@@ -1,21 +1,22 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, TextInput, ImageBackground, TouchableOpacity, Image, AppRegistry } from 'react-native';
 import { StackNavigator } from 'react-navigation';
-import questao34 from '.';
+import resultados2 from '.';
+
 var SoundPlayer = require('react-native-sound');
 var song = null;
 
-class questao33 extends Component{
+class questao40 extends Component{
   static navigationOptions = {
-    title:'questao33',
+    title:'questao40',
   }
   constructor(props){
     super(props)
-    this.state = {numero33:this.props.navigation.state.params.numero32}
+    this.state = {numero40:this.props.navigation.state.params.numero39}
   }
 
   componentWillMount(){
-    song = new SoundPlayer('questao33.mp3', SoundPlayer.MAIN_BUNDLE, (error) => {
+    song = new SoundPlayer('questao40.mp3', SoundPlayer.MAIN_BUNDLE, (error) => {
       if (error)
         ToastAndroid.show('Error when init SoundPlayer :(((', ToastAndroid.SHORT);
     });
@@ -35,37 +36,36 @@ class questao33 extends Component{
   render() {
     const { navigate } = this.props.navigation;
     return (
-      <ImageBackground source={require('../img/bg_secu.png')} style={[styles.container,{width:"100%", height:"100%"}]}>
+      <ImageBackground  onLoad={this.onPressButtonPlay.bind(this)} source={require('../img/bg_secu.png')} style={[styles.container,{width:"100%", height:"100%"}]}>
         <TouchableOpacity style={styles.play} onPress={this.onPressButtonPlay.bind(this)}>
            <Image  style={styles.player} source={require('../img/player.png')} />
          </TouchableOpacity>
 
 
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao34', {numero33:this.state.numero33 + 0})}>
-            <Image  style={styles.imagem} source={require('../img/atividades-3-4/circulo.jpg')} />
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados2', {numero40:this.state.numero39 + 0})}>
+            <Image  style={styles.imagem} source={require('../img/atividades-3-4/vermelho.png')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao34', {numero33:this.state.numero33 + 1})}>
-            <Image style={styles.imagem} source={require('../img/atividades-3-4/pentagano.jpg')} />
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados2', {numero40:this.state.numero39 + 0})}>
+            <Image style={styles.imagem} source={require('../img/atividades-3-4/laranja.png')} />
           </TouchableOpacity>
         </View>
 
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao34', {numero33:this.state.numero33 + 0})}>
-            <Image style={styles.imagem} source={require('../img/atividades-3-4/losango.jpg')} />
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados2', {numero35:this.state.numero39 + 1})}>
+            <Image style={styles.imagem} source={require('../img/atividades-3-4/preto.png')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao34', {numero33:this.state.numero33 + 0})}>
-            <Image style={styles.imagem} source={require('../img/atividades-3-4/quadrado.jpg')} />
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados2', {numero40:this.state.numero39 + 0})}>
+            <Image style={styles.imagem} source={require('../img/atividades-3-4/roxo.png')} />
           </TouchableOpacity>
         </View>
       </ImageBackground>
     );
   }
 }
-export default questao33;
-
+export default questao40;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -88,19 +88,21 @@ const styles = StyleSheet.create({
   },
   icones: {
     width: "48%",
+    backgroundColor:'#fff',
     height: "65%",
     borderStyle:"solid",
   },
   imagem: {
     width: "100%",
     height: "100%",
-    borderRadius: 65,
+
     borderWidth:4,
     borderColor:"purple",
   },
   alternativas: {
     marginLeft: "10%",
     marginRight: "10%",
+
     flex: 1,
     flexDirection: "row",
     justifyContent: "space-between",

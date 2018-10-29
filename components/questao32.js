@@ -31,7 +31,6 @@ class questao32 extends Component{
 
 
 
-
   render() {
     const { navigate } = this.props.navigation;
     return (

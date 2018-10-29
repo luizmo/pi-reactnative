@@ -12,8 +12,9 @@ class  questao31 extends Component{
   }
   constructor(props){
     super(props)
-    this.state = {numero31:this.props.navigation.state.params.numero30}
+    this.state = {numero35:this.props.navigation.state.params.numero34}
   }
+
   componentWillMount(){
     song = new SoundPlayer('questao31.mp3', SoundPlayer.MAIN_BUNDLE, (error) => {
       if (error)
