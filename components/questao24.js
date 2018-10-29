@@ -8,7 +8,7 @@ var song = null;
 
 class questao24 extends Component{
   static navigationOptions = {
-    title:'questao4',
+    title:'questao24',
   }
   constructor(props){
     super(props)
