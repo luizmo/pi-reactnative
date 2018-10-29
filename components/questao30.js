@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, TextInput, ImageBackground, TouchableOpacity, Image, AppRegistry } from 'react-native';
 import { StackNavigator } from 'react-navigation';
-import resultados from '.';
+import resultados2 from '.';
 
 class questao30 extends Component{
   static navigationOptions = {
-    title:'questao30',
+    title:'questao10',
   }
   constructor(props){
     super(props)
-    this.state = {numero2:this.props.navigation.state.params.numero1}
+    this.state = {numero30:this.props.navigation.state.params.numero29}
   }
   render() {
     const { navigate } = this.props.navigation;
@@ -21,21 +21,21 @@ class questao30 extends Component{
           </Text>
         </View>
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados', {numero2:this.state.numero2 + 1})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados2', {numero30:this.state.numero30 + 1})}>
             <Image  style={styles.imagem} source={require('../img/atividades-3-4/cama.png')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados', {numero2:this.state.numero2 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados2', {numero30:this.state.numero30 + 0})}>
             <Image style={styles.imagem} source={require('../img/atividades-3-4/liquidificador.png')} />
           </TouchableOpacity>
         </View>
 
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados', {numero2:this.state.numero2 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados2', {numero30:this.state.numero30 + 0})}>
             <Image style={styles.imagem} source={require('../img/atividades-3-4/televisao.png')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados', {numero2:this.state.numero2 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados2', {numero30:this.state.numero30 + 0})}>
             <Image style={styles.imagem} source={require('../img/atividades-3-4/talher.png')} />
           </TouchableOpacity>
         </View>

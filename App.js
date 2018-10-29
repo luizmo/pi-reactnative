@@ -4,7 +4,7 @@ import { StackNavigator } from 'react-navigation';
 import { menu, questoes, questao2, questao3, questao4, questao5, questao6, questao7, questao8, questao9,
   questao10, questao11, questao12, questao13, questao14, questao15,questao16, questao17,questao18,
   questao19, questao20, questao21, questao22, questao23, questao24, questao25, questao26, questao27, questao28,
-  questao29, questao30, resultados } from './components';
+  questao29, questao30, resultados, resultados2 } from './components';
 
 class App extends Component{
   static navigationOptions = {
@@ -87,6 +87,7 @@ const tela = StackNavigator({
     questao29: {screen: questao29},
     questao30: {screen: questao30},
     resultados: {screen: resultados},
+    resultados2: {screen: resultados2},
     menu: {screen: menu},
 })
 

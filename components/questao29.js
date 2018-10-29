@@ -4,12 +4,12 @@ import { StackNavigator } from 'react-navigation';
 import questao30 from '.';
 
 class questao29 extends Component{
-  static navigationOptins = {
-    title:'questao29',
+  static navigationOptions = {
+    title:'questao9',
   }
   constructor(props){
     super(props)
-    this.state = {numero2:this.props.navigation.state.params.numero1}
+    this.state = {numero29:this.props.navigation.state.params.numero28}
   }
   render() {
     const { navigate } = this.props.navigation;
@@ -21,21 +21,21 @@ class questao29 extends Component{
           </Text>
         </View>
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao30', {numero2:this.state.numero2 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao30', {numero29:this.state.numero29 + 0})}>
             <Image  style={styles.imagem} source={require('../img/atividades-3-4/pa.png')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao30', {numero2:this.state.numero2 + 1})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao30', {numero29:this.state.numero29 + 1})}>
             <Image style={styles.imagem} source={require('../img/atividades-3-4/mochila.png')} />
           </TouchableOpacity>
         </View>
 
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao30', {numero2:this.state.numero2 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao30', {numero29:this.state.numero29 + 0})}>
             <Image style={styles.imagem} source={require('../img/atividades-3-4/pedra.png')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao30', {numero2:this.state.numero2 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao30', {numero29:this.state.numero29 + 0})}>
             <Image style={styles.imagem} source={require('../img/atividades-3-4/televisao.png')} />
           </TouchableOpacity>
         </View>

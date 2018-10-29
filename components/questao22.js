@@ -5,11 +5,11 @@ import questao23 from '.';
 
 class questao22 extends Component{
   static navigationOptions = {
-    title:'questao22',
+    title:'questao2',
   }
   constructor(props){
     super(props)
-    this.state = {numero2:this.props.navigation.state.params.numero1}
+    this.state = {numero22:this.props.navigation.state.params.numero21}
   }
   render() {
     const { navigate } = this.props.navigation;
@@ -21,21 +21,21 @@ class questao22 extends Component{
           </Text>
         </View>
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao23', {numero2:this.state.numero2 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao23', {numero22:this.state.numero22 + 0})}>
             <Image  style={styles.imagem} source={require('../img/atividades-3-4/urso.png')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao23', {numero2:this.state.numero2 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao23', {numero22:this.state.numero22 + 0})}>
             <Image style={styles.imagem} source={require('../img/atividades-3-4/cobra.png')} />
           </TouchableOpacity>
         </View>
 
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao23', {numero2:this.state.numero2 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao23', {numero22:this.state.numero22 + 0})}>
             <Image style={styles.imagem} source={require('../img/atividades-3-4/tubarao.png')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao23', {numero2:this.state.numero2 + 1})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao23', {numero22:this.state.numero22 + 1})}>
             <Image style={styles.imagem} source={require('../img/atividades-3-4/peixe.png')} />
           </TouchableOpacity>
         </View>
