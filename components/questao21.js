@@ -3,6 +3,9 @@ import { StyleSheet, Text, View, TextInput, ImageBackground, TouchableOpacity, I
 import { StackNavigator } from 'react-navigation';
 import questao22 from '.';
 
+var SoundPlayer = require('react-native-sound');
+var song = null;
+
 class questao21 extends Component{
   static navigationOptions = {
     title:'questao21',
@@ -10,12 +13,27 @@ class questao21 extends Component{
 
   constructor(props){
     super(props)
-    this.state = { numero21:0 }
+    this.state = { numero21:0 , pause: false }
+  }
+  componentWillMount(){
+    song = new SoundPlayer('questao21.mp3', SoundPlayer.MAIN_BUNDLE, (error) => {
+      if (error)
+        ToastAndroid.show('Error when init SoundPlayer :(((', ToastAndroid.SHORT);
+    });
+  }
+
+  onPressButtonPlay() {
+    if (song != null) {
+      song.play((success) =>{
+        if(!success)
+        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT);
+      });
+    }
   }
   render() {
     const { navigate } = this.props.navigation;
     return (
-      <ImageBackground source={require('../img/bg_secu.png')} style={[styles.container,{width:"100%", height:"100%"}]}>
+      <ImageBackground source={require('../img/bg_secu.png')} style={[styles.container,{width:"100%", height:"100%"}]} onLoad={this.onPressButtonPlay.bind(this)}>
         <View style={styles.pergunta}>
           <Text style={styles.texto}>
             Toque no cachorrinho
