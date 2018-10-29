@@ -3,18 +3,39 @@ import { StyleSheet, Text, View, TextInput, ImageBackground, TouchableOpacity, I
 import { StackNavigator } from 'react-navigation';
 import questao20 from '.';
 
+var SoundPlayer = require('react-native-sound');
+var song = null;
+
 class questao19 extends Component{
   static navigationOptions = {
     title:'questao19',
   }
   constructor(props){
     super(props)
-    this.state = { numero19:this.props.navigation.state.params.numero18 }
+    this.state = { numero19:this.props.navigation.state.params.numero18 };
+    this.state ={ pause: false, };
   }
+  
+  componentWillMount(){
+    song = new SoundPlayer('questao19.mp3', SoundPlayer.MAIN_BUNDLE, (error) => {
+      if (error)
+        ToastAndroid.show('Error when init SoundPlayer :(((', ToastAndroid.SHORT);
+    });
+  }
+
+  onPressButtonPlay() {
+    if (song != null) {
+      song.play((success) =>{
+        if(!success)
+        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT); 
+      });
+    }
+  }
+
   render() {
     const { navigate } = this.props.navigation;
     return (
-      <ImageBackground source={require('../img/bg_secu.png')} style={[styles.container,{width:"100%", height:"100%"}]}>
+      <ImageBackground source={require('../img/bg_secu.png')} style={[styles.container,{width:"100%", height:"100%"}]} onLoad={this.onPressButtonPlay.bind(this)}>
         <View style={styles.pergunta}>
           <Text style={styles.texto}>
           Quantos números, dos apresentados a seguir, são menores que 10?
@@ -86,5 +107,16 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "row",
     justifyContent: "space-between",
-  }
+  },
+  player: {
+    width:"100%",
+    height:"100%"
+  },
+  play: {
+    width:"39%",
+    height:"39%",
+    flex: 1,
+    flexDirection: "row",
+    marginLeft:"28%"
+   },
 });
