@@ -3,6 +3,9 @@ import { StyleSheet, Text, View, TextInput, ImageBackground, TouchableOpacity, I
 import { StackNavigator } from 'react-navigation';
 import questao2 from '.';
 
+var SoundPlayer = require('react-native-sound');
+var song = null;
+
 class questoes extends Component{
   static navigationOptions = {
     title:'questoes',
@@ -10,17 +13,33 @@ class questoes extends Component{
 
   constructor(props){
     super(props)
-    this.state = { numero1:0 }
+    this.state = { numero1:0 },
+    this.state ={ pause: false, };
   }
+
+  componentWillMount(){
+    song = new SoundPlayer('questao1.mp3', SoundPlayer.MAIN_BUNDLE, (error) => {
+      if (error)
+        ToastAndroid.show('Error when init SoundPlayer :(((', ToastAndroid.SHORT);
+    });
+  }
+
+  onPressButtonPlay() {
+    if (song != null) {
+      song.play((success) =>{
+        if(!success)
+        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT); 
+      });
+    }
+  }
+
   render() {
     const { navigate } = this.props.navigation;
     return (
-      <ImageBackground source={require('../img/bg_secu.png')} style={[styles.container,{width:"100%", height:"100%"}]}>
-        <View style={styles.pergunta}>
-          <Text style={styles.texto}>
-            O que é usado na limonada?
-          </Text>
-        </View>
+      <ImageBackground source={require('../img/bg_secu.png')} style={[styles.container,{width:"100%", height:"100%"}]} onLoad={this.onPressButtonPlay.bind(this)}>
+        <TouchableOpacity style={styles.play} onPress={this.onPressButtonPlay.bind(this)}>
+          <Image  style={styles.player} source={require('../img/player.png')} />
+        </TouchableOpacity>
         <View style={styles.alternativas}>
           <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao2', {numero1:0+0})}>
             <Image  style={styles.imagem} source={require('../img/atividades-6-7/atividade1/a.jpg')} />
@@ -84,5 +103,16 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "row",
     justifyContent: "space-between",
-  }
+  },
+  player: {
+    width:"100%",
+    height:"100%"
+  },
+  play: {
+    width:"39%",
+    height:"39%",
+    flex: 1,
+    flexDirection: "row",
+    marginLeft:"28%"
+   }
 });
