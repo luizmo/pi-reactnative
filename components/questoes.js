@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
     color:'purple',
   },
   icones: {
-    width: "48%",
+    width: "46%",
     height: "65%",
     borderStyle:"solid",
   },
