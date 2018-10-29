@@ -26,7 +26,7 @@ class questao11 extends Component{
     if (song != null) {
       song.play((success) =>{
         if(!success)
-        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT); 
+        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT);
       });
     }
   }
@@ -38,7 +38,7 @@ class questao11 extends Component{
        <TouchableOpacity style={styles.play} onPress={this.onPressButtonPlay.bind(this)}>
           <Image  style={styles.player} source={require('../img/player.png')} />
         </TouchableOpacity>
-        
+
         <View style={styles.alternativas}>
           <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao12', {numero11:this.state.numero11 + 0})}>
             <Image  style={styles.imagem} source={require('../img/atividades-6-7/atividade11/binoculos.jpg')} />

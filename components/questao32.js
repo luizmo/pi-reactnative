@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, TextInput, ImageBackground, TouchableOpacity, Image, AppRegistry } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import questao33 from '.';
-
+var SoundPlayer = require('react-native-sound');
+var song = null;
 class questao32 extends Component{
   static navigationOptions = {
     title:'questao32',
@@ -11,15 +12,35 @@ class questao32 extends Component{
     super(props)
     this.state = {numero32:this.props.navigation.state.params.numero31}
   }
+
+  componentWillMount(){
+    song = new SoundPlayer('questao32.mp3', SoundPlayer.MAIN_BUNDLE, (error) => {
+      if (error)
+        ToastAndroid.show('Error when init SoundPlayer :(((', ToastAndroid.SHORT);
+    });
+  }
+
+  onPressButtonPlay() {
+    if (song != null) {
+      song.play((success) =>{
+        if(!success)
+        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT);
+      });
+    }
+  }
+
+
+
+
   render() {
     const { navigate } = this.props.navigation;
     return (
       <ImageBackground source={require('../img/bg_secu.png')} style={[styles.container,{width:"100%", height:"100%"}]}>
-        <View style={styles.pergunta}>
-          <Text style={styles.texto}>
-            Qual desses e triangulo ?
-          </Text>
-        </View>
+
+        <TouchableOpacity style={styles.play} onPress={this.onPressButtonPlay.bind(this)}>
+           <Image  style={styles.player} source={require('../img/player.png')} />
+         </TouchableOpacity>
+
         <View style={styles.alternativas}>
           <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao33', {numero32:this.state.numero32 + 0})}>
             <Image  style={styles.imagem} source={require('../img/atividades-3-4/pentagano.jpg')} />
@@ -83,6 +104,17 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "row",
     justifyContent: "space-between",
-  }
+  },
+  player: {
+    width:"100%",
+    height:"100%"
+  },
+  play: {
+    width:"39%",
+    height:"39%",
+    flex: 1,
+    flexDirection: "row",
+    marginLeft:"28%"
+   },
 
 });
