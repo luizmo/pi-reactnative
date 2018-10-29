@@ -13,8 +13,7 @@ class questoes extends Component{
 
   constructor(props){
     super(props)
-    this.state = { numero1:0 };
-    this.state ={ pause: false, };
+    this.state = { numero1:0, pause: false }
   }
 
   componentWillMount(){
