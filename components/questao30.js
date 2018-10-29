@@ -21,21 +21,21 @@ class questao30 extends Component{
           </Text>
         </View>
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados2', {numero30:this.state.numero30 + 1})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao31', {numero30:this.state.numero30 + 1})}>
             <Image  style={styles.imagem} source={require('../img/atividades-3-4/cama.png')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados2', {numero30:this.state.numero30 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao31', {numero30:this.state.numero30 + 0})}>
             <Image style={styles.imagem} source={require('../img/atividades-3-4/liquidificador.png')} />
           </TouchableOpacity>
         </View>
 
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados2', {numero30:this.state.numero30 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao31', {numero30:this.state.numero30 + 0})}>
             <Image style={styles.imagem} source={require('../img/atividades-3-4/televisao.png')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados2', {numero30:this.state.numero30 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao31', {numero30:this.state.numero30 + 0})}>
             <Image style={styles.imagem} source={require('../img/atividades-3-4/talher.png')} />
           </TouchableOpacity>
         </View>
