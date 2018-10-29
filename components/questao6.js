@@ -12,8 +12,7 @@ var song = null;
   }
   constructor(props){
     super(props)
-    this.state = { numero6:this.props.navigation.state.params.numero5 };
-    this.state ={ pause: false, };
+    this.state = { numero6:this.props.navigation.state.params.numero5, pause: false}
   }
 
   componentWillMount(){
