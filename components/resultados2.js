@@ -8,7 +8,7 @@ class resultados2 extends Component{
   }
   constructor(props){
     super(props)
-    this.state = { numero31:this.props.navigation.state.params.numero30 }
+    this.state = { numero36:this.props.navigation.state.params.numero35 }
   }
   render() {
     return (
@@ -18,7 +18,7 @@ class resultados2 extends Component{
             Numero de acertos:
           </Text>
           <Text style={styles.texto}>
-            {this.state.numero31}
+            {this.state.numero36}
           </Text>
         </View>
       </ImageBackground>

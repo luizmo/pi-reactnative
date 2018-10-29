@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, TextInput, ImageBackground, TouchableOpacity, I
 import { StackNavigator } from 'react-navigation';
 import questao33 from '.';
 
-class questao29 extends Component{
+class questao32 extends Component{
   static navigationOptions = {
     title:'questao32',
   }

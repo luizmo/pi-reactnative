@@ -5,7 +5,7 @@ import resultados2 from '.';
 
 class questao35 extends Component{
   static navigationOptions = {
-    title:'questao33',
+    title:'questao35',
   }
   constructor(props){
     super(props)
