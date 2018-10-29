@@ -5,11 +5,11 @@ import questao27 from '.';
 
 class questao26 extends Component{
   static navigationOptions = {
-    title:'questao26',
+    title:'questao6',
   }
   constructor(props){
     super(props)
-    this.state = {numero2:this.props.navigation.state.params.numero1}
+    this.state = {numero26:this.props.navigation.state.params.numero25}
   }
   render() {
     const { navigate } = this.props.navigation;
@@ -21,21 +21,21 @@ class questao26 extends Component{
           </Text>
         </View>
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao27', {numero2:this.state.numero2 + 1})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao27', {numero26:this.state.numero26 + 1})}>
             <Image  style={styles.imagem} source={require('../img/atividades-3-4/cama.png')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao27', {numero2:this.state.numero2 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao27', {numero26:this.state.numero26 + 0})}>
             <Image style={styles.imagem} source={require('../img/atividades-3-4/pa.png')} />
           </TouchableOpacity>
         </View>
 
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao27', {numero2:this.state.numero2 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao27', {numero26:this.state.numero26 + 0})}>
             <Image style={styles.imagem} source={require('../img/atividades-3-4/liquidificador.png')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao27', {numero2:this.state.numero2 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao27', {numero26:this.state.numero26 + 0})}>
             <Image style={styles.imagem} source={require('../img/atividades-3-4/carro.png')} />
           </TouchableOpacity>
         </View>
