@@ -12,7 +12,7 @@ class questao11 extends Component{
   }
   constructor(props){
     super(props)
-    this.state = { numero11:this.props.navigation.state.params.numero10 }
+    this.state = { numero11:this.props.navigation.state.params.numero10 };
     this.state ={ pause: false, };
   }
 
@@ -39,11 +39,7 @@ class questao11 extends Component{
        <TouchableOpacity style={styles.play} onPress={this.onPressButtonPlay.bind(this)}>
           <Image  style={styles.player} source={require('../img/player.png')} />
         </TouchableOpacity>
-        <View style={styles.pergunta}>
-          <Text style={styles.texto}>
-            Qual desses objetos é usado para observar o espaço sideral?
-          </Text>
-        </View>
+        
         <View style={styles.alternativas}>
           <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao12', {numero11:this.state.numero11 + 0})}>
             <Image  style={styles.imagem} source={require('../img/atividades-6-7/atividade11/binoculos.jpg')} />

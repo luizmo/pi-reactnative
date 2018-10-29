@@ -39,11 +39,7 @@ class questao20 extends Component{
         <TouchableOpacity style={styles.play} onPress={this.onPressButtonPlay.bind(this)}>
           <Image  style={styles.player} source={require('../img/player.png')} />
         </TouchableOpacity>
-        <View style={styles.pergunta}>
-          <Text style={styles.texto}>
-            Toque na opção em que as vogais estão na ordem correta
-          </Text>
-        </View>
+      
         
         <View style = {styles.alternativas}>
           <TouchableOpacity style = {styles.options}  onPress={()=> navigate('resultados', {numero20:this.state.numero20 + 1})}>

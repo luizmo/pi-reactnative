@@ -39,11 +39,7 @@ class questao17 extends Component{
         <TouchableOpacity style={styles.play} onPress={this.onPressButtonPlay.bind(this)}>
           <Image  style={styles.player} source={require('../img/player.png')} />
         </TouchableOpacity>
-        <View style={styles.pergunta}>
-          <Text style={styles.texto}>
-            Quantos números existem antes do numero 4?
-          </Text>
-        </View>
+        
         <View style={styles.alternativas}>
           <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao18', {numero17:this.state.numero17 + 1})}>
             <Image  style={styles.imagem} source={require('../img/atividades-6-7/atividade17/quatro.jpg')} />
