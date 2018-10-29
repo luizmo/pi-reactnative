@@ -35,15 +35,15 @@ class questao19 extends Component{
   render() {
     const { navigate } = this.props.navigation;
     return (
-      <ImageBackground source={require('../img/bg_secu.png')} style={[styles.container,{width:"100%", height:"100%"}]} onLoad={this.onPressButtonPlay.bind(this)}>
-        <View style={styles.pergunta}>
-          <Text style={styles.texto}>
-          Quantos números, dos apresentados a seguir, são menores que 10?
-          </Text>
+      <ImageBackground source={require('../img/bg_secu.png')} style={[styles.container,{width:"100%", height:"100%"}]} style={[styles.container,{width:"100%", height:"100%"}]} onLoad={this.onPressButtonPlay.bind(this)}>
+         <TouchableOpacity style={styles.play} onPress={this.onPressButtonPlay.bind(this)}>
+          <Image  style={styles.player} source={require('../img/player.png')} />
+        </TouchableOpacity>
+        
           <View>
             <Image source={require('../img/atividades-6-7/atividade19/menores_8.jpg')} />
           </View>
-        </View>
+        
         <View style={styles.alternativas}>
           <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao20', {numero19:this.state.numero19 + 0})}>
             <Image  style={styles.imagem} source={require('../img/atividades-6-7/atividade19/quatro.jpg')} />

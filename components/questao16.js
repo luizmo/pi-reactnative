@@ -38,11 +38,7 @@ class questao16 extends Component{
         <TouchableOpacity style={styles.play} onPress={this.onPressButtonPlay.bind(this)}>
           <Image  style={styles.player} source={require('../img/player.png')} />
         </TouchableOpacity>
-        <View style={styles.pergunta}>
-          <Text style={styles.texto}>
-            Quantas vogais existem na palavara ÔNIBUS?
-            </Text>
-        </View>
+       
         <View style={styles.alternativas}>
           <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao17', {numero16:this.state.numero16 + 0})}>
             <Image  style={styles.imagem} source={require('../img/atividades-6-7/atividade16/um.jpg')} />

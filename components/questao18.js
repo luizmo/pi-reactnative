@@ -40,13 +40,9 @@ class questao18 extends Component{
           <Image  style={styles.player} source={require('../img/player.png')} />
         </TouchableOpacity>
         <View style={styles.pergunta}>
-          <Text style={styles.texto}>
-            Os números apresentados a seguir estão organizados de forma: 
-          </Text>
-          <View>
+          
             <Image source={require('../img/atividades-6-7/atividade18/sequencia.jpg')} />
           </View>
-        </View>
         
         <View style = {styles.alternativas}>
           <TouchableOpacity style = {styles.options}  onPress={()=> navigate('questao19', {numero18:this.state.numero18 + 0})}>
