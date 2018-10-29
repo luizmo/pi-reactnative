@@ -3,26 +3,46 @@ import { StyleSheet, Text, View, TextInput, ImageBackground, TouchableOpacity, I
 import { StackNavigator } from 'react-navigation';
 import questao20 from '.';
 
+var SoundPlayer = require('react-native-sound');
+var song = null;
+
 class questao19 extends Component{
   static navigationOptions = {
     title:'questao19',
   }
   constructor(props){
     super(props)
-    this.state = { numero19:this.props.navigation.state.params.numero18 }
+    this.state = { numero19:this.props.navigation.state.params.numero18, pause: false}
   }
+  
+  componentWillMount(){
+    song = new SoundPlayer('questao19.mp3', SoundPlayer.MAIN_BUNDLE, (error) => {
+      if (error)
+        ToastAndroid.show('Error when init SoundPlayer :(((', ToastAndroid.SHORT);
+    });
+  }
+
+  onPressButtonPlay() {
+    if (song != null) {
+      song.play((success) =>{
+        if(!success)
+        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT); 
+      });
+    }
+  }
+
   render() {
     const { navigate } = this.props.navigation;
     return (
-      <ImageBackground source={require('../img/bg_secu.png')} style={[styles.container,{width:"100%", height:"100%"}]}>
-        <View style={styles.pergunta}>
-          <Text style={styles.texto}>
-          Quantos números, dos apresentados a seguir, são menores que 10?
-          </Text>
-          <View>
-            <Image source={require('../img/atividades-6-7/atividade19/menores_8.jpg')} />
+      <ImageBackground source={require('../img/bg_secu.png')} style={[styles.container,{width:"100%", height:"100%"}]} style={[styles.container,{width:"100%", height:"100%"}]} onLoad={this.onPressButtonPlay.bind(this)}>
+         <TouchableOpacity style={styles.play} onPress={this.onPressButtonPlay.bind(this)}>
+          <Image  style={styles.player} source={require('../img/player.png')} />
+        </TouchableOpacity>
+        
+          <View style={styles.exemplo}>
+            <Image style={styles.exemploimg} source={require('../img/atividades-6-7/atividade19/menores_8.jpg')} />
           </View>
-        </View>
+        
         <View style={styles.alternativas}>
           <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao20', {numero19:this.state.numero19 + 0})}>
             <Image  style={styles.imagem} source={require('../img/atividades-6-7/atividade19/quatro.jpg')} />
@@ -86,5 +106,29 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "row",
     justifyContent: "space-between",
-  }
+  },
+  player: {
+    width:"100%",
+    height:"100%"
+  },
+  play: {
+    width:"39%",
+    height:"39%",
+    flex: 1,
+    flexDirection: "row",
+    marginLeft:"28%"
+   },
+   exemplo: {
+    alignSelf: "center",
+    width:"70%",
+    height:"10%",
+    marginBottom:"2%"
+   },
+   exemploimg: {
+    width:"100%",
+    height:"100%",
+    borderRadius: 10,
+    borderWidth:4,
+    borderColor:"purple"
+   }
 });

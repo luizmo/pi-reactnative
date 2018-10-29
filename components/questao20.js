@@ -3,23 +3,42 @@ import { StyleSheet, Text, View, TextInput, ImageBackground, TouchableOpacity, I
 import { StackNavigator } from 'react-navigation';
 import resultados from '.';
 
+var SoundPlayer = require('react-native-sound');
+var song = null;
+
 class questao20 extends Component{
   static navigationOptions = {
     title:'questao20',
   }
   constructor(props){
     super(props)
-    this.state = { numero20:this.props.navigation.state.params.numero19 }
+    this.state = { numero20:this.props.navigation.state.params.numero19, pause: false}
   }
+
+  componentWillMount(){
+    song = new SoundPlayer('questao20.mp3', SoundPlayer.MAIN_BUNDLE, (error) => {
+      if (error)
+        ToastAndroid.show('Error when init SoundPlayer :(((', ToastAndroid.SHORT);
+    });
+  }
+
+  onPressButtonPlay() {
+    if (song != null) {
+      song.play((success) =>{
+        if(!success)
+        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT); 
+      });
+    }
+  }
+
   render() {
     const { navigate } = this.props.navigation;
     return (
-      <ImageBackground source={require('../img/bg_secu.png')} style={[styles.container,{width:"100%", height:"100%"}]}>
-        <View style={styles.pergunta}>
-          <Text style={styles.texto}>
-            Toque na opção em que as vogais estão na ordem correta
-          </Text>
-        </View>
+      <ImageBackground source={require('../img/bg_secu.png')} style={[styles.container,{width:"100%", height:"100%"}]} onLoad={this.onPressButtonPlay.bind(this)}>
+        <TouchableOpacity style={styles.play} onPress={this.onPressButtonPlay.bind(this)}>
+          <Image  style={styles.player} source={require('../img/player.png')} />
+        </TouchableOpacity>
+      
         
         <View style = {styles.alternativas}>
           <TouchableOpacity style = {styles.options}  onPress={()=> navigate('resultados', {numero20:this.state.numero20 + 1})}>
@@ -56,18 +75,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  pergunta: {
-    marginBottom: "5%",
-    alignItems:"center",
-    backgroundColor:"white",
-    borderRadius: 16,
-    marginTop: "2%",
-    marginRight: "8%",
-    marginLeft: "8%",
-    borderWidth:4,
-    borderColor:"purple",
-    padding:10
-  },
   texto: {
     fontSize: 20,
     textAlign: "center",
@@ -88,5 +95,14 @@ const styles = StyleSheet.create({
   },
    imagem:{
     borderRadius: 12,
-  }
+  },
+  player: {
+    width:"100%",
+    height:"100%"
+  },
+  play: {
+    width:"34%",
+    height:"34%",
+    alignSelf: "center",
+   },
 });
