@@ -14,10 +14,10 @@ export default class menu extends Component{
     const {navigate} = this.props.navigation;
     return (
       <ImageBackground source={require('../img/bg_menu.png')} style={[styles.container,{width:"100%", height:"100%"}]}>
-       
+
        <View style={styles.opcoes}>
           <TouchableOpacity style={[styles.button,{marginTop:"40%"}]}  onPress={()=> navigate('questao21')}>
-              
+
               <Text style={styles.texto}>
                 4 e 5 anos
               </Text>
@@ -43,6 +43,7 @@ export default class menu extends Component{
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+
   },
   texto: {
     fontSize: 30,
@@ -50,8 +51,10 @@ const styles = StyleSheet.create({
     color:'purple',
   },
   opcoes: {
+
     marginLeft: "10%",
     marginRight: "10%",
+    marginTop: "20%",
     flex: 1,
     flexDirection: "column",
   },

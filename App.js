@@ -94,6 +94,10 @@ const tela = StackNavigator({
     resultados: {screen: resultados},
     resultados2: {screen: resultados2},
     menu: {screen: menu},
-})
+},
+{
+  headerMode: 'none',
+
+});
 
 AppRegistry.registerComponent('ProjetoPI', () => tela);
