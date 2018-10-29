@@ -36,7 +36,7 @@ class questao34 extends Component{
   render() {
     const { navigate } = this.props.navigation;
     return (
-      <ImageBackground source={require('../img/bg_secu.png')} style={[styles.container,{width:"100%", height:"100%"}]}>
+      <ImageBackground source={require('../img/bg_secu.png')} style={[styles.container,{width:"100%", height:"100%"}]} onLoad={this.onPressButtonPlay.bind(this)}>
         <TouchableOpacity style={styles.play} onPress={this.onPressButtonPlay.bind(this)}>
            <Image  style={styles.player} source={require('../img/player.png')} />
          </TouchableOpacity>
