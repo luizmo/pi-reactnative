@@ -12,8 +12,7 @@ class questao19 extends Component{
   }
   constructor(props){
     super(props)
-    this.state = { numero19:this.props.navigation.state.params.numero18 };
-    this.state ={ pause: false, };
+    this.state = { numero19:this.props.navigation.state.params.numero18, pause: false}
   }
   
   componentWillMount(){
@@ -40,8 +39,8 @@ class questao19 extends Component{
           <Image  style={styles.player} source={require('../img/player.png')} />
         </TouchableOpacity>
         
-          <View>
-            <Image source={require('../img/atividades-6-7/atividade19/menores_8.jpg')} />
+          <View style={styles.exemplo}>
+            <Image style={styles.exemploimg} source={require('../img/atividades-6-7/atividade19/menores_8.jpg')} />
           </View>
         
         <View style={styles.alternativas}>
@@ -119,4 +118,17 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     marginLeft:"28%"
    },
+   exemplo: {
+    alignSelf: "center",
+    width:"70%",
+    height:"10%",
+    marginBottom:"2%"
+   },
+   exemploimg: {
+    width:"100%",
+    height:"100%",
+    borderRadius: 10,
+    borderWidth:4,
+    borderColor:"purple"
+   }
 });

@@ -12,8 +12,7 @@ class questao20 extends Component{
   }
   constructor(props){
     super(props)
-    this.state = { numero20:this.props.navigation.state.params.numero19 };
-    this.state ={ pause: false, };
+    this.state = { numero20:this.props.navigation.state.params.numero19, pause: false}
   }
 
   componentWillMount(){
@@ -76,18 +75,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  pergunta: {
-    marginBottom: "5%",
-    alignItems:"center",
-    backgroundColor:"white",
-    borderRadius: 16,
-    marginTop: "2%",
-    marginRight: "8%",
-    marginLeft: "8%",
-    borderWidth:4,
-    borderColor:"purple",
-    padding:10
-  },
   texto: {
     fontSize: 20,
     textAlign: "center",
@@ -114,10 +101,8 @@ const styles = StyleSheet.create({
     height:"100%"
   },
   play: {
-    width:"39%",
-    height:"39%",
-    flex: 1,
-    flexDirection: "row",
-    marginLeft:"28%"
+    width:"34%",
+    height:"34%",
+    alignSelf: "center",
    },
 });

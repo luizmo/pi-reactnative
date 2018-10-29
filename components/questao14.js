@@ -12,8 +12,7 @@ class questao14 extends Component{
   }
   constructor(props){
     super(props)
-    this.state = { numero14:this.props.navigation.state.params.numero13 };
-    this.state ={ pause: false, };
+    this.state = { numero14:this.props.navigation.state.params.numero13, pause: false }
   }
 
   componentWillMount(){
@@ -39,11 +38,6 @@ class questao14 extends Component{
         <TouchableOpacity style={styles.play} onPress={this.onPressButtonPlay.bind(this)}>
           <Image  style={styles.player} source={require('../img/player.png')} />
         </TouchableOpacity>
-        <View style={styles.pergunta}>
-          <Text style={styles.texto}>
-            Qual das letras abaixo é uma vogal?
-          </Text>
-        </View>
         <View style={styles.alternativas}>
           <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao15', {numero14:this.state.numero14 + 0})}>
             <Image  style={styles.imagem} source={require('../img/atividades-6-7/atividade14/letra_M.jpg')} />

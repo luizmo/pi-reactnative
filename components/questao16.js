@@ -12,8 +12,7 @@ class questao16 extends Component{
   }
   constructor(props){
     super(props)
-    this.state = { numero16:this.props.navigation.state.params.numero15 };
-    this.state ={ pause: false, };
+    this.state = { numero16:this.props.navigation.state.params.numero15, pause: false}
   }
 
   componentWillMount(){
