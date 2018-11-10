@@ -26,7 +26,7 @@ class questao2 extends Component{
     if (song != null) {
       song.play((success) =>{
         if(!success)
-        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT); 
+        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT);
       });
     }
   }
@@ -106,8 +106,8 @@ const styles = StyleSheet.create({
     height:"100%"
   },
   play: {
-    width:"39%",
-    height:"39%",
+    width:"35%",
+    height:"35%",
     flex: 1,
     flexDirection: "row",
     marginLeft:"28%"
