@@ -41,7 +41,7 @@ class questao18 extends Component{
         <Image source={require('../img/atividades-6-7/atividade18/sequencia.jpg')} style={styles.exemplo}/>
         
         <View style = {styles.alternativas}>
-          <TouchableOpacity style = {styles.options}  onPress={()=> navigate('questao19', {numero18:this.state.numero18 + 0})}>
+          <TouchableOpacity style = {styles.options}  onPress={()=> ({})}>
             <Text style = {styles.optiontext}>  CRESCENTE  </Text>
           </TouchableOpacity >
           

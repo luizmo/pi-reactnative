@@ -47,19 +47,19 @@ class questao20 extends Component{
         </View>
 
         <View style = {styles.alternativas}>
-          <TouchableOpacity style = {styles.options}  onPress={()=> navigate('resultados', {numero20:this.state.numero20 + 0})}>
+          <TouchableOpacity style = {styles.options}  onPress={()=> ({})}>
             <Image  style={styles.imagem} source={require('../img/atividades-6-7/atividade20/vogais2.jpg')} />
           </TouchableOpacity >
         </View>
 
         <View style = {styles.alternativas}>
-          <TouchableOpacity style = {styles.options}  onPress={()=> navigate('resultados', {numero20:this.state.numero20 + 0})}>
+          <TouchableOpacity style = {styles.options}  onPress={()=> ({})}>
             <Image  style={styles.imagem} source={require('../img/atividades-6-7/atividade20/vogais3.jpg')} />
           </TouchableOpacity >
         </View>
 
         <View style = {styles.alternativas}>
-          <TouchableOpacity style = {styles.options}  onPress={()=> navigate('resultados', {numero20:this.state.numero20 + 0})}>
+          <TouchableOpacity style = {styles.options}  onPress={()=> ({})}>
             <Image  style={styles.imagem} source={require('../img/atividades-6-7/atividade20/vogais4.jpg')} />
           </TouchableOpacity >
         </View>

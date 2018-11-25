@@ -44,17 +44,17 @@ class questao13 extends Component{
             <Image  style={styles.imagem} source={require('../img/atividades-6-7/atividade13/regua.jpg')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao14', {numero13:this.state.numero13 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> ({})}>
             <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade13/borracha.jpg')} />
           </TouchableOpacity>
         </View>
 
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao14', {numero13:this.state.numero13 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> ({})}>
             <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade13/lapis.jpg')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao14', {numero13:this.state.numero13 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> ({})}>
             <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade13/apontador.jpg')} />
           </TouchableOpacity>
         </View>

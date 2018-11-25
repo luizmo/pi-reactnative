@@ -39,17 +39,17 @@ class questao14 extends Component{
           <Image  style={styles.player} source={require('../img/player.png')} />
         </TouchableOpacity>
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao15', {numero14:this.state.numero14 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> ({})}>
             <Image  style={styles.imagem} source={require('../img/atividades-6-7/atividade14/letra_M.jpg')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao15', {numero14:this.state.numero14 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> ({})}>
             <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade14/letra_P.jpg')} />
           </TouchableOpacity>
         </View>
 
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao15', {numero14:this.state.numero14 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> ({})}>
             <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade14/letra_L.jpg')} />
           </TouchableOpacity>
 
