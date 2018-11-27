@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, TextInput, ImageBackground, TouchableOpacity, Image, AppRegistry } from 'react-native';
 import { StackNavigator } from 'react-navigation';
-import resultados2 from '.';
+import questao44 from '.';
 
 class questao43 extends Component{
   static navigationOptions = {
@@ -25,13 +25,13 @@ class questao43 extends Component{
           </Text>
         </View>
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados2')}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao44')}>
             <Text>
               S - R - F - D
             </Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados2')}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao44')}>
             <Text>
               I - U - O - A
             </Text>
@@ -39,13 +39,13 @@ class questao43 extends Component{
         </View>
 
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados2')}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao44')}>
             <Text>
               U - P - O - A
             </Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados2')}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao44')}>
             <Text>
               S - E - V - E
             </Text>
