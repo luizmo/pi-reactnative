@@ -12,7 +12,6 @@ class questao40 extends Component{
   }
   constructor(props){
     super(props)
-    this.state = {numero40:this.props.navigation.state.params.numero39}
   }
 
   componentWillMount(){
@@ -43,21 +42,21 @@ class questao40 extends Component{
 
 
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados2', {numero40:this.state.numero39 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados2')}>
             <Image  style={styles.imagem} source={require('../img/atividades-3-4/vermelho.png')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados2', {numero40:this.state.numero39 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados2')}>
             <Image style={styles.imagem} source={require('../img/atividades-3-4/laranja.png')} />
           </TouchableOpacity>
         </View>
 
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados2', {numero35:this.state.numero39 + 1})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados2')}>
             <Image style={styles.imagem} source={require('../img/atividades-3-4/preto.png')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados2', {numero40:this.state.numero39 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados2')}>
             <Image style={styles.imagem} source={require('../img/atividades-3-4/roxo.png')} />
           </TouchableOpacity>
         </View>

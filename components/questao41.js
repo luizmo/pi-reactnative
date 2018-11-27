@@ -9,7 +9,6 @@ class questao41 extends Component{
   }
   constructor(props){
     super(props)
-    this.state = {numero41:this.props.navigation.state.params.numero40}
   }
 
   render() {
@@ -25,13 +24,13 @@ class questao41 extends Component{
           </Text>
         </View>
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados2', {numero41:this.state.numero40 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados2')}>
             <Text>
               A - F - R- S
             </Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados2', {numero41:this.state.numero40 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados2')}>
             <Text>
               Z - E - R - S
             </Text>
@@ -39,13 +38,13 @@ class questao41 extends Component{
         </View>
 
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados2', {numero41:this.state.numero40 + 1})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados2')}>
             <Text>
               R - P - O - A
             </Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados2', {numero41:this.state.numero40 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados2')}>
             <Text>
               R - B - A - O
             </Text>

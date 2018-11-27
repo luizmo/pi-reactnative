@@ -25,13 +25,13 @@ class questao43 extends Component{
           </Text>
         </View>
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados2', {numero43:this.state.numero42 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados2')}>
             <Text>
               S - R - F - D
             </Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados2', {numero43:this.state.numero42 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados2')}>
             <Text>
               I - U - O - A
             </Text>
@@ -39,13 +39,13 @@ class questao43 extends Component{
         </View>
 
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados2', {numero43:this.state.numero42 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados2')}>
             <Text>
               U - P - O - A
             </Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados2', {numero43:this.state.numero42 + 1})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('resultados2')}>
             <Text>
               S - E - V - E
             </Text>

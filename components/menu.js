@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, TextInput, ImageBackground, TouchableOpacity, Image, AppRegistry } from 'react-native';
 import { StackNavigator } from 'react-navigation';
-import { questoes, questao20 } from '.';
+import { questoes, questao20, questao41 } from '.';
 
 export default class menu extends Component{
   static navigationOptions = {
@@ -29,7 +29,7 @@ export default class menu extends Component{
             </Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.button}>
+          <TouchableOpacity style={styles.button} onPress={()=> navigate('questao41')}>
             <Text style={styles.texto}>
               8 e 9 anos
             </Text>
