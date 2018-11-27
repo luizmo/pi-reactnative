@@ -40,17 +40,17 @@ class questao12 extends Component{
         </TouchableOpacity>
         
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao13', {numero12:this.state.numero12 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> ({})}>
             <Image  style={styles.imagem} source={require('../img/atividades-6-7/atividade12/baseball.png')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao13', {numero12:this.state.numero12 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> ({})}>
             <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade12/basquete.jpg')} />
           </TouchableOpacity>
         </View>
 
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao13', {numero12:this.state.numero12 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> ({})}>
             <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade12/raquete.jpg')} />
           </TouchableOpacity>
 

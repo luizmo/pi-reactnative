@@ -39,17 +39,17 @@ class questao16 extends Component{
         </TouchableOpacity>
        
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao17', {numero16:this.state.numero16 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> ({})}>
             <Image  style={styles.imagem} source={require('../img/atividades-6-7/atividade16/um.jpg')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao17', {numero16:this.state.numero16 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> ({})}>
             <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade16/cinco.jpg')} />
           </TouchableOpacity>
         </View>
 
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao17', {numero16:this.state.numero16 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> ({})}>
             <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade16/zero.jpg')} />
           </TouchableOpacity>
 

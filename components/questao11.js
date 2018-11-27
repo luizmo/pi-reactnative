@@ -40,11 +40,11 @@ class questao11 extends Component{
         </TouchableOpacity>
 
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao12', {numero11:this.state.numero11 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> ({})}>
             <Image  style={styles.imagem} source={require('../img/atividades-6-7/atividade11/binoculos.jpg')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao12', {numero11:this.state.numero11 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> ({})}>
             <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade11/lupa.jpg')} />
           </TouchableOpacity>
         </View>
@@ -54,7 +54,7 @@ class questao11 extends Component{
             <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade11/telescopio.jpg')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao12', {numero11:this.state.numero11 + 0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> ({})}>
             <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade11/microscopio.png')} />
           </TouchableOpacity>
         </View>
