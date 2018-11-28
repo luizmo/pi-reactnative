@@ -1,70 +1,62 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, TextInput, ImageBackground, TouchableOpacity, Image, AppRegistry } from 'react-native';
 import { StackNavigator } from 'react-navigation';
-import resultados2 from '.';
+import questao48 from '.';
 
-var SoundPlayer = require('react-native-sound');
-var song = null;
-
-class questao40 extends Component{
+class questao47 extends Component{
   static navigationOptions = {
-    title:'questao40',
+    title:'questao46',
   }
   constructor(props){
     super(props)
   }
 
-  componentWillMount(){
-    song = new SoundPlayer('questao40.mp3', SoundPlayer.MAIN_BUNDLE, (error) => {
-      if (error)
-        ToastAndroid.show('Error when init SoundPlayer :(((', ToastAndroid.SHORT);
-    });
-  }
-
-  onPressButtonPlay() {
-    if (song != null) {
-      song.play((success) =>{
-        if(!success)
-        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT);
-      });
-    }
-  }
-
-
-
   render() {
     const { navigate } = this.props.navigation;
     return (
-      <ImageBackground  onLoad={this.onPressButtonPlay.bind(this)} source={require('../img/bg_secu.png')} style={[styles.container,{width:"100%", height:"100%"}]}>
-        <TouchableOpacity style={styles.play} onPress={this.onPressButtonPlay.bind(this)}>
-           <Image  style={styles.player} source={require('../img/player.png')} />
-         </TouchableOpacity>
-
-
+      <ImageBackground  source={require('../img/bg_secu.png')} style={[styles.container,{width:"100%", height:"100%"}]}>
+        <View style={styles.pergunta}>
+          <Text style={styles.texto}>
+            Esses numero estão em ordem?
+          </Text>
+          <Image style={styles.gabriel} source={require('../img/atividades-8-9/quetao47.png')} />
+        </View>
         <View style={styles.alternativas}>
           <TouchableOpacity style={styles.icones}>
-            <Image  style={styles.imagem} source={require('../img/atividades-3-4/vermelho.png')} />
+            <View style={styles.imagem}>
+              <Text style={styles.ga}>Não</Text>
+              <Text style={styles.ga} >ordenado</Text>
+            </View>
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.icones} >
-            <Image style={styles.imagem} source={require('../img/atividades-3-4/laranja.png')} />
+            <View style={styles.imagem}>
+              <Text style={styles.ga} > Decrescente</Text>
+            </View>
           </TouchableOpacity>
+
         </View>
 
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('menu')}>
-            <Image style={styles.imagem} source={require('../img/atividades-3-4/preto.png')} />
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao48')}>
+            <View style={styles.imagem}>
+              <Text style={styles.ga} > Crescente</Text>
+            </View>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones}>
-            <Image style={styles.imagem} source={require('../img/atividades-3-4/roxo.png')} />
+          <TouchableOpacity style={styles.icones} >
+            <View style={styles.imagem}>
+              <Text style={styles.ga} >Ordenado </Text>
+              <Text style={styles.ga} >Errado </Text>
+            </View>
+
           </TouchableOpacity>
         </View>
       </ImageBackground>
     );
   }
 }
-export default questao40;
+export default questao47;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -87,14 +79,17 @@ const styles = StyleSheet.create({
   },
   icones: {
     width: "48%",
-    backgroundColor:'#fff',
+    //backgroundColor:'#fff',
     height: "65%",
     borderStyle:"solid",
   },
   imagem: {
     width: "100%",
     height: "100%",
-
+    borderRadius: 50,
+    backgroundColor: "#fff",
+    alignItems:"center",
+    justifyContent:"center",
     borderWidth:4,
     borderColor:"purple",
   },
@@ -117,5 +112,15 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     marginLeft:"28%"
    },
+   gabriel:{
+     width: 290,
+     borderRadius: 5,
+   },
+   ga:{
+      fontWeight:"bold",
+     fontSize:20,
+     color:"#0b44f5"
+
+   }
 
 });
