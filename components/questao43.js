@@ -9,7 +9,6 @@ class questao43 extends Component{
   }
   constructor(props){
     super(props)
-    this.state = {numero43:this.props.navigation.state.params.numero42}
   }
 
   render() {
