@@ -71,6 +71,7 @@ const styles = StyleSheet.create({
     marginLeft: "8%",
     borderWidth:4,
     borderColor:"purple",
+    padding:10
   },
   texto: {
     fontSize: 35,

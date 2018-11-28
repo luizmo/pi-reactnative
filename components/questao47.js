@@ -5,7 +5,7 @@ import questao48 from '.';
 
 class questao47 extends Component{
   static navigationOptions = {
-    title:'questao46',
+    title:'questao47',
   }
   constructor(props){
     super(props)
@@ -21,37 +21,16 @@ class questao47 extends Component{
           </Text>
           <Image style={styles.gabriel} source={require('../img/atividades-8-9/quetao47.png')} />
         </View>
-        <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones}>
-            <View style={styles.imagem}>
-              <Text style={styles.ga}>Não</Text>
-              <Text style={styles.ga} >ordenado</Text>
-            </View>
-          </TouchableOpacity>
+        <View style = {styles.alternativas}>
+          <TouchableOpacity style = {styles.options}  onPress={()=> ({})}>
+            <Text style = {styles.optiontext}>DECRESCENTE</Text>
+          </TouchableOpacity >
 
-          <TouchableOpacity style={styles.icones} >
-            <View style={styles.imagem}>
-              <Text style={styles.ga} > Decrescente</Text>
-            </View>
-          </TouchableOpacity>
-
-        </View>
-
-        <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao48')}>
-            <View style={styles.imagem}>
-              <Text style={styles.ga} > Crescente</Text>
-            </View>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.icones} >
-            <View style={styles.imagem}>
-              <Text style={styles.ga} >Ordenado </Text>
-              <Text style={styles.ga} >Errado </Text>
-            </View>
-
+          <TouchableOpacity style = {styles.options} onPress={()=> navigate('questao48')}>
+          <Text style = {styles.optiontext}>CRESCENTE</Text>
           </TouchableOpacity>
         </View>
+
       </ImageBackground>
     );
   }
@@ -71,6 +50,7 @@ const styles = StyleSheet.create({
     marginLeft: "8%",
     borderWidth:4,
     borderColor:"purple",
+    padding:10
   },
   texto: {
     fontSize: 35,
@@ -94,11 +74,8 @@ const styles = StyleSheet.create({
     borderColor:"purple",
   },
   alternativas: {
-    marginLeft: "10%",
-    marginRight: "10%",
 
-    flex: 1,
-    flexDirection: "row",
+
     justifyContent: "space-between",
   },
   player: {
@@ -116,11 +93,21 @@ const styles = StyleSheet.create({
      width: 290,
      borderRadius: 5,
    },
-   ga:{
-      fontWeight:"bold",
-     fontSize:20,
-     color:"#0b44f5"
 
-   }
+   options:{
+     alignSelf: "center",
+     borderRadius: 16,
+     borderWidth: 4,
+     borderColor: "purple",
+     marginTop: 10,
+   },
+    optiontext:{
+     fontSize: 30,
+     fontWeight: "bold",
+     borderRadius: 13,
+     color:"#0b44f5",
+     backgroundColor: "white",
+     padding: 10,
+   },
 
 });

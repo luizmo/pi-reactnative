@@ -26,7 +26,7 @@ class questao20 extends Component{
     if (song != null) {
       song.play((success) =>{
         if(!success)
-        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT); 
+        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT);
       });
     }
   }
@@ -38,10 +38,10 @@ class questao20 extends Component{
         <TouchableOpacity style={styles.play} onPress={this.onPressButtonPlay.bind(this)}>
           <Image  style={styles.player} source={require('../img/player.png')} />
         </TouchableOpacity>
-      
-        
+
+
         <View style = {styles.alternativas}>
-          <TouchableOpacity style = {styles.options}  onPress={()=> navigate('resultados', {numero20:this.state.numero20 + 1})}>
+          <TouchableOpacity style = {styles.options}  onPress={()=> navigate('menu')}>
             <Image  style={styles.imagem} source={require('../img/atividades-6-7/atividade20/vogais1.jpg')} />
           </TouchableOpacity >
         </View>
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     borderWidth: 4,
     borderColor: "purple",
-    
+
   },
    imagem:{
     borderRadius: 12,
