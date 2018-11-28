@@ -26,7 +26,7 @@ class questao3 extends Component{
     if (song != null) {
       song.play((success) =>{
         if(!success)
-        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT); 
+        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT);
       });
     }
   }
@@ -38,11 +38,11 @@ class questao3 extends Component{
           <Image  style={styles.player} source={require('../img/player.png')} />
         </TouchableOpacity>
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao4', {numero3:this.state.numero3 + 0})}>
+          <TouchableOpacity style={styles.icones}>
             <Image  style={styles.imagem} source={require('../img/atividades-6-7/atividade3/i.jpg')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao4', {numero3:this.state.numero3 + 0})}>
+          <TouchableOpacity style={styles.icones}>
             <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade3/j.jpg')} />
           </TouchableOpacity>
         </View>
@@ -52,7 +52,7 @@ class questao3 extends Component{
             <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade3/k.jpg')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao4', {numero3:this.state.numero3 + 0})}>
+          <TouchableOpacity style={styles.icones}>
             <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade3/l.jpg')} />
           </TouchableOpacity>
         </View>

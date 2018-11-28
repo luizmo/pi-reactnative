@@ -42,7 +42,7 @@ class questao36 extends Component{
          </TouchableOpacity>
 
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao37', {numero36:this.state.numero35 + 0})}>
+          <TouchableOpacity style={styles.icones} >
             <Image  style={styles.imagem} source={require('../img/atividades-3-4/azul.png')} />
           </TouchableOpacity>
 
@@ -52,11 +52,11 @@ class questao36 extends Component{
         </View>
 
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao37', {numero36:this.state.numero35 + 0})}>
+          <TouchableOpacity style={styles.icones} >
             <Image style={styles.imagem} source={require('../img/atividades-3-4/verde.png')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao37', {numero36:this.state.numero35 + 0})}>
+          <TouchableOpacity style={styles.icones} >
             <Image style={styles.imagem} source={require('../img/atividades-3-4/preto.png')} />
           </TouchableOpacity>
         </View>
