@@ -8,14 +8,39 @@ import { menu, questoes, questao2, questao3, questao4, questao5, questao6, quest
   questao41, questao42, questao43,questao44,questao45,questao46,questao47,questao48,
   questao49, questao50, questao51, questao52, questao53, questao54, resultados, resultados2 } from './components';
 
+var SoundPlayer = require('react-native-sound');
+var song = null;
+
 class App extends Component{
   static navigationOptions = {
     title:'Home',
   };
+
+ constructor(props){
+    super(props)
+    this.state = { numero1:0, pause: false }
+  }
+
+  componentWillMount(){
+    song = new SoundPlayer('inicio.mp3', SoundPlayer.MAIN_BUNDLE, (error) => {
+      if (error)
+        ToastAndroid.show('Error when init SoundPlayer :(((', ToastAndroid.SHORT);
+    });
+  }
+
+  onPressButtonPlay() {
+    if (song != null) {
+      song.play((success) =>{
+        if(!success)
+        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT); 
+      });
+    }
+  }
+
   render() {
     const { navigate } = this.props.navigation;
     return (
-      <ImageBackground source={require('./img/bg_principal.png')} style={[styles.container,{width:"100%", height:"100%"}]}>
+      <ImageBackground source={require('./img/bg_principal.png')} style={[styles.container,{width:"100%", height:"100%"}]} onLoad={this.onPressButtonPlay.bind(this)}>
         <TouchableOpacity style={styles.button} onPress={()=> navigate('menu')}>
           <Text style={styles.texto}>
             Iniciar

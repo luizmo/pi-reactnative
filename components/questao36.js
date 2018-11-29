@@ -5,6 +5,9 @@ import questao37 from '.';
 
 var SoundPlayer = require('react-native-sound');
 var song = null;
+var song3 = null;
+var song4 = null;
+var song5 = null;
 
 class questao36 extends Component{
   static navigationOptions = {
@@ -12,7 +15,7 @@ class questao36 extends Component{
   }
   constructor(props){
     super(props)
-    this.state = {numero36:this.props.navigation.state.params.numero35}
+    this.state = { pause: false }
   }
 
 
@@ -21,6 +24,21 @@ class questao36 extends Component{
         if (error)
           ToastAndroid.show('Error when init SoundPlayer :(((', ToastAndroid.SHORT);
       });
+
+      song3 = new SoundPlayer('erro3.mp3', SoundPlayer.MAIN_BUNDLE, (error) => {
+      if (error)
+        ToastAndroid.show('Error when init SoundPlayer :(((', ToastAndroid.SHORT);
+    });
+
+    song4 = new SoundPlayer('erro4.mp3', SoundPlayer.MAIN_BUNDLE, (error) => {
+      if (error)
+        ToastAndroid.show('Error when init SoundPlayer :(((', ToastAndroid.SHORT);
+    });
+
+    song5 = new SoundPlayer('erro5.mp3', SoundPlayer.MAIN_BUNDLE, (error) => {
+      if (error)
+        ToastAndroid.show('Error when init SoundPlayer :(((', ToastAndroid.SHORT);
+    });
     }
 
     onPressButtonPlay() {
@@ -32,6 +50,33 @@ class questao36 extends Component{
       }
     }
 
+    erro1() {
+    if (song3 != null) {
+      song3.play((success) =>{
+        if(!success)
+        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT); 
+      });
+    }
+  }
+
+  erro2() {
+    if (song4 != null) {
+      song4.play((success) =>{
+        if(!success)
+        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT); 
+      });
+    }
+  }
+
+  erro3() {
+    if (song5 != null) {
+      song5.play((success) =>{
+        if(!success)
+        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT); 
+      });
+    }
+  }
+
   render() {
     const { navigate } = this.props.navigation;
     return (
@@ -42,21 +87,21 @@ class questao36 extends Component{
          </TouchableOpacity>
 
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} >
+          <TouchableOpacity style={styles.icones} onPress={this.erro1.bind(this)}>
             <Image  style={styles.imagem} source={require('../img/atividades-3-4/azul.png')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao37', {numero36:this.state.numero35 + 1})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao37')}>
             <Image style={styles.imagem} source={require('../img/atividades-3-4/amarelo.png')} />
           </TouchableOpacity>
         </View>
 
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} >
+          <TouchableOpacity style={styles.icones} onPress={this.erro2.bind(this)}>
             <Image style={styles.imagem} source={require('../img/atividades-3-4/verde.png')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} >
+          <TouchableOpacity style={styles.icones} onPress={this.erro3.bind(this)}>
             <Image style={styles.imagem} source={require('../img/atividades-3-4/preto.png')} />
           </TouchableOpacity>
         </View>

@@ -12,7 +12,7 @@ class questao26 extends Component{
   }
   constructor(props){
     super(props)
-    this.state = {numero26:this.props.navigation.state.params.numero25, pause:false}
+    this.state = { pause: false }
   }
   componentWillMount(){
     song = new SoundPlayer('questao26.mp3', SoundPlayer.MAIN_BUNDLE, (error) => {
@@ -37,7 +37,7 @@ class questao26 extends Component{
           <Image  style={styles.player} source={require('../img/player.png')} />
         </TouchableOpacity>
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao27', {numero26:this.state.numero26 + 1})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao27')}>
             <Image  style={styles.imagem} source={require('../img/atividades-3-4/cama.png')} />
           </TouchableOpacity>
 

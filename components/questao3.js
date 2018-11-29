@@ -5,6 +5,10 @@ import questao4 from '.';
 
 var SoundPlayer = require('react-native-sound');
 var song = null;
+var song2 = null;
+var song3 = null;
+var song4 = null;
+var song5 = null;
 
 class questao3 extends Component{
   static navigationOptions = {
@@ -12,11 +16,26 @@ class questao3 extends Component{
   }
   constructor(props){
     super(props)
-    this.state = {numero3:this.props.navigation.state.params.numero2, pause: false};
+    this.state = { pause: false }
   }
 
   componentWillMount(){
     song = new SoundPlayer('questao3.mp3', SoundPlayer.MAIN_BUNDLE, (error) => {
+      if (error)
+        ToastAndroid.show('Error when init SoundPlayer :(((', ToastAndroid.SHORT);
+    });
+
+    song3 = new SoundPlayer('erro3.mp3', SoundPlayer.MAIN_BUNDLE, (error) => {
+      if (error)
+        ToastAndroid.show('Error when init SoundPlayer :(((', ToastAndroid.SHORT);
+    });
+
+    song4 = new SoundPlayer('erro4.mp3', SoundPlayer.MAIN_BUNDLE, (error) => {
+      if (error)
+        ToastAndroid.show('Error when init SoundPlayer :(((', ToastAndroid.SHORT);
+    });
+
+    song5 = new SoundPlayer('erro5.mp3', SoundPlayer.MAIN_BUNDLE, (error) => {
       if (error)
         ToastAndroid.show('Error when init SoundPlayer :(((', ToastAndroid.SHORT);
     });
@@ -30,6 +49,33 @@ class questao3 extends Component{
       });
     }
   }
+
+  erro1() {
+    if (song3 != null) {
+      song3.play((success) =>{
+        if(!success)
+        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT); 
+      });
+    }
+  }
+
+  erro2() {
+    if (song4 != null) {
+      song4.play((success) =>{
+        if(!success)
+        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT); 
+      });
+    }
+  }
+
+  erro3() {
+    if (song5 != null) {
+      song5.play((success) =>{
+        if(!success)
+        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT); 
+      });
+    }
+  }
   render() {
     const {navigate} = this.props.navigation;
     return (
@@ -38,21 +84,21 @@ class questao3 extends Component{
           <Image  style={styles.player} source={require('../img/player.png')} />
         </TouchableOpacity>
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones}>
+          <TouchableOpacity style={styles.icones} onPress={this.erro3.bind(this)}>
             <Image  style={styles.imagem} source={require('../img/atividades-6-7/atividade3/i.jpg')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones}>
+          <TouchableOpacity style={styles.icones} onPress={this.erro2.bind(this)}>
             <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade3/j.jpg')} />
           </TouchableOpacity>
         </View>
 
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao4', {numero3:this.state.numero3 + 1})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao4')}>
             <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade3/k.jpg')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones}>
+          <TouchableOpacity style={styles.icones} onPress={this.erro1.bind(this)}>
             <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade3/l.jpg')} />
           </TouchableOpacity>
         </View>

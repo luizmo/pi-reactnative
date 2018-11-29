@@ -3,12 +3,62 @@ import { StyleSheet, Text, View, TextInput, ImageBackground, TouchableOpacity, I
 import { StackNavigator } from 'react-navigation';
 import questao53 from '.';
 
+var SoundPlayer = require('react-native-sound');
+var song3 = null;
+var song4 = null;
+var song5 = null;
+
 class questao52 extends Component{
   static navigationOptions = {
     title:'questao52',
   }
   constructor(props){
     super(props)
+    this.state = { pause: false }
+  }
+  componentWillMount(){
+
+    song3 = new SoundPlayer('erro3.mp3', SoundPlayer.MAIN_BUNDLE, (error) => {
+      if (error)
+        ToastAndroid.show('Error when init SoundPlayer :(((', ToastAndroid.SHORT);
+    });
+
+    song4 = new SoundPlayer('erro4.mp3', SoundPlayer.MAIN_BUNDLE, (error) => {
+      if (error)
+        ToastAndroid.show('Error when init SoundPlayer :(((', ToastAndroid.SHORT);
+    });
+
+    song5 = new SoundPlayer('erro5.mp3', SoundPlayer.MAIN_BUNDLE, (error) => {
+      if (error)
+        ToastAndroid.show('Error when init SoundPlayer :(((', ToastAndroid.SHORT);
+    });
+  }
+
+  erro1() {
+    if (song3 != null) {
+      song3.play((success) =>{
+        if(!success)
+        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT); 
+      });
+    }
+  }
+
+  erro2() {
+    if (song4 != null) {
+      song4.play((success) =>{
+        if(!success)
+        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT); 
+      });
+    }
+  }
+
+  erro3() {
+    if (song5 != null) {
+      song5.play((success) =>{
+        if(!success)
+        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT); 
+      });
+    }
   }
 
   render() {
@@ -19,11 +69,11 @@ class questao52 extends Component{
            <Image style={styles.imagempergunta} source={require('../img/atividades-8-9/bruno/atividade3/conta3.jpg')} />
         </View>
         <View style={styles.alternativas}>
-            <TouchableOpacity style={styles.icones} onPress={()=> ({})}>
+            <TouchableOpacity style={styles.icones} onPress={this.erro2.bind(this)}>
               <Image  style={styles.imagem} source={require('../img/atividades-8-9/bruno/atividade3/i.png')} />
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.icones} onPress={()=> ({})}>
+            <TouchableOpacity style={styles.icones} onPress={this.erro1.bind(this)}>
               <Image style={styles.imagem} source={require('../img/atividades-8-9/bruno/atividade3/j.jpg')} />
             </TouchableOpacity>
         </View>
@@ -33,7 +83,7 @@ class questao52 extends Component{
               <Image style={styles.imagem} source={require('../img/atividades-8-9/bruno/atividade3/k.jpg')} />
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.icones} onPress={()=> ({})}>
+            <TouchableOpacity style={styles.icones} onPress={this.erro3.bind(this)}>
               <Image style={styles.imagem} source={require('../img/atividades-8-9/bruno/atividade3/l.jpg')} />
             </TouchableOpacity>
         </View>

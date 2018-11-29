@@ -3,12 +3,63 @@ import { StyleSheet, Text, View, TextInput, ImageBackground, TouchableOpacity, I
 import { StackNavigator } from 'react-navigation';
 import questao48 from '.';
 
+var SoundPlayer = require('react-native-sound');
+var song3 = null;
+var song4 = null;
+var song5 = null;
+
 class questao47 extends Component{
   static navigationOptions = {
     title:'questao47',
   }
   constructor(props){
     super(props)
+    this.state = { pause: false }
+  }
+
+  componentWillMount(){
+
+    song3 = new SoundPlayer('erro3.mp3', SoundPlayer.MAIN_BUNDLE, (error) => {
+      if (error)
+        ToastAndroid.show('Error when init SoundPlayer :(((', ToastAndroid.SHORT);
+    });
+
+    song4 = new SoundPlayer('erro4.mp3', SoundPlayer.MAIN_BUNDLE, (error) => {
+      if (error)
+        ToastAndroid.show('Error when init SoundPlayer :(((', ToastAndroid.SHORT);
+    });
+
+    song5 = new SoundPlayer('erro5.mp3', SoundPlayer.MAIN_BUNDLE, (error) => {
+      if (error)
+        ToastAndroid.show('Error when init SoundPlayer :(((', ToastAndroid.SHORT);
+    });
+  }
+
+  erro1() {
+    if (song3 != null) {
+      song3.play((success) =>{
+        if(!success)
+        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT); 
+      });
+    }
+  }
+
+  erro2() {
+    if (song4 != null) {
+      song4.play((success) =>{
+        if(!success)
+        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT); 
+      });
+    }
+  }
+
+  erro3() {
+    if (song5 != null) {
+      song5.play((success) =>{
+        if(!success)
+        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT); 
+      });
+    }
   }
 
   render() {
@@ -22,7 +73,7 @@ class questao47 extends Component{
           <Image style={styles.gabriel} source={require('../img/atividades-8-9/quetao47.png')} />
         </View>
         <View style = {styles.alternativas}>
-          <TouchableOpacity style = {styles.options}  onPress={()=> ({})}>
+          <TouchableOpacity style = {styles.options}  onPress={this.erro1.bind(this)}>
             <Text style = {styles.optiontext}>DECRESCENTE</Text>
           </TouchableOpacity >
 
