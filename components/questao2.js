@@ -53,7 +53,7 @@ class questao2 extends Component{
     if (song3 != null) {
       song3.play((success) =>{
         if(!success)
-        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT); 
+        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT);
       });
     }
   }
@@ -62,7 +62,7 @@ class questao2 extends Component{
     if (song4 != null) {
       song4.play((success) =>{
         if(!success)
-        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT); 
+        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT);
       });
     }
   }
@@ -71,7 +71,7 @@ class questao2 extends Component{
     if (song5 != null) {
       song5.play((success) =>{
         if(!success)
-        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT); 
+        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT);
       });
     }
   }
@@ -146,16 +146,17 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
   },
-  player: {
+  /*player: {
     width:"100%",
     height:"100%"
-  },
+  },*/
   play: {
-    width:"35%",
-    height:"35%",
+    width:"39%",
+    height:"39%",
     flex: 1,
     flexDirection: "row",
-    marginLeft:"28%"
+    //marginLeft:"28%"
+      margin:"10%"
    }
 
 });

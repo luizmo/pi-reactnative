@@ -53,7 +53,7 @@ class questao20 extends Component{
     if (song3 != null) {
       song3.play((success) =>{
         if(!success)
-        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT); 
+        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT);
       });
     }
   }
@@ -62,7 +62,7 @@ class questao20 extends Component{
     if (song4 != null) {
       song4.play((success) =>{
         if(!success)
-        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT); 
+        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT);
       });
     }
   }
@@ -71,7 +71,7 @@ class questao20 extends Component{
     if (song5 != null) {
       song5.play((success) =>{
         if(!success)
-        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT); 
+        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT);
       });
     }
   }
