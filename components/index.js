@@ -52,6 +52,12 @@ import questao51 from './questao51';
 import questao52 from './questao52';
 import questao53 from './questao53';
 import questao54 from './questao54';
+import questao55 from './questao55';
+import questao56 from './questao56';
+import questao57 from './questao57';
+import questao58 from './questao58';
+import questao59 from './questao59';
+import questao60 from './questao60';
 import resultados from './resultados';
 import resultados2 from './resultados2';
 import menu from './menu';
@@ -61,4 +67,5 @@ export{ menu, questoes, questao2, questao3, questao4, questao5, questao6, questa
   questao19, questao20, questao21, questao22, questao23, questao24, questao25, questao26, questao27, questao28,
   questao29, questao30,questao31,questao32,questao33,questao34,questao35,questao36,questao37,questao38, questao39,
   questao40, questao41, questao42, questao43, questao44, questao45, questao46,
-  questao47,questao48,questao49, questao50, questao51, questao52, questao53, questao54, resultados, resultados2 }
+  questao47,questao48,questao49, questao50, questao51, questao52, questao53, questao54,
+  questao55,questao56,questao57,questao58,questao59,questao60, resultados, resultados2 }
