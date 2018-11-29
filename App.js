@@ -6,7 +6,8 @@ import { menu, questoes, questao2, questao3, questao4, questao5, questao6, quest
   questao19, questao20, questao21, questao22, questao23, questao24, questao25, questao26, questao27, questao28,
   questao29, questao30, questao31, questao32, questao33, questao34, questao36,questao35, questao37, questao38, questao39,questao40,
   questao41, questao42, questao43,questao44,questao45,questao46,questao47,questao48,
-  questao49, questao50, questao51, questao52, questao53, questao54, resultados, resultados2 } from './components';
+  questao49, questao50, questao51, questao52, questao53, questao54,questao55,questao56,questao57,questao58,questao59,
+  questao60, resultados, resultados2 } from './components';
 
 var SoundPlayer = require('react-native-sound');
 var song = null;
@@ -137,6 +138,12 @@ const tela = StackNavigator({
     questao52: {screen: questao52},
     questao53: {screen: questao53},
     questao54: {screen: questao54},
+    questao55: {screen: questao55},
+    questao56: {screen: questao56},
+    questao57: {screen: questao57},
+    questao58: {screen: questao58},
+    questao59: {screen: questao59},
+    questao60: {screen: questao60},
     resultados: {screen: resultados},
 
     resultados2: {screen: resultados2},

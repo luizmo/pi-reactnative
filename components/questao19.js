@@ -5,6 +5,9 @@ import questao20 from '.';
 
 var SoundPlayer = require('react-native-sound');
 var song = null;
+var song3 = null;
+var song4 = null;
+var song5 = null;
 
 class questao19 extends Component{
   static navigationOptions = {
@@ -12,11 +15,26 @@ class questao19 extends Component{
   }
   constructor(props){
     super(props)
-    this.state = { pause: false}
+    this.state = { pause: false }
   }
-  
+
   componentWillMount(){
     song = new SoundPlayer('questao19.mp3', SoundPlayer.MAIN_BUNDLE, (error) => {
+      if (error)
+        ToastAndroid.show('Error when init SoundPlayer :(((', ToastAndroid.SHORT);
+    });
+
+    song3 = new SoundPlayer('erro3.mp3', SoundPlayer.MAIN_BUNDLE, (error) => {
+      if (error)
+        ToastAndroid.show('Error when init SoundPlayer :(((', ToastAndroid.SHORT);
+    });
+
+    song4 = new SoundPlayer('erro4.mp3', SoundPlayer.MAIN_BUNDLE, (error) => {
+      if (error)
+        ToastAndroid.show('Error when init SoundPlayer :(((', ToastAndroid.SHORT);
+    });
+
+    song5 = new SoundPlayer('erro5.mp3', SoundPlayer.MAIN_BUNDLE, (error) => {
       if (error)
         ToastAndroid.show('Error when init SoundPlayer :(((', ToastAndroid.SHORT);
     });
@@ -25,6 +43,33 @@ class questao19 extends Component{
   onPressButtonPlay() {
     if (song != null) {
       song.play((success) =>{
+        if(!success)
+        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT);
+      });
+    }
+  }
+
+  erro1() {
+    if (song3 != null) {
+      song3.play((success) =>{
+        if(!success)
+        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT); 
+      });
+    }
+  }
+
+  erro2() {
+    if (song4 != null) {
+      song4.play((success) =>{
+        if(!success)
+        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT); 
+      });
+    }
+  }
+
+  erro3() {
+    if (song5 != null) {
+      song5.play((success) =>{
         if(!success)
         ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT); 
       });
@@ -44,17 +89,17 @@ class questao19 extends Component{
           </View>
         
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> ({})}>
+          <TouchableOpacity style={styles.icones} onPress={this.erro1.bind(this)}>
             <Image  style={styles.imagem} source={require('../img/atividades-6-7/atividade19/quatro.jpg')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> ({})}>
+          <TouchableOpacity style={styles.icones} onPress={this.erro3.bind(this)}>
             <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade19/um.jpg')} />
           </TouchableOpacity>
         </View>
 
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> ({})}>
+          <TouchableOpacity style={styles.icones} onPress={this.erro2.bind(this)}>
             <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade19/dois.jpg')} />
           </TouchableOpacity>
 

@@ -40,7 +40,7 @@ class questao55 extends Component{
         <View style={styles.alternativas}>
           <TouchableOpacity style={styles.icones} >
             <View style={styles.imagem}>
-              <Text style={styles.opcoes} >Estátua da Liberdade</Text>
+              <Text style={styles.opcoes} >Panteão</Text>
             </View>
           </TouchableOpacity>
 
@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
    },
    opcoes:{
      fontWeight:"bold",
-     fontSize:15,
+     fontSize:20,
      color:"#0b44f5"
       
    }

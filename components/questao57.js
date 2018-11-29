@@ -25,7 +25,7 @@ class questao57 extends Component{
             <Image  style={styles.imagem} source={require('../img/atividades-8-9/rio.jpg')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao47')}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao58')}>
             <Image style={styles.imagem} source={require('../img/atividades-8-9/minas.png')} />
           </TouchableOpacity>
         </View>

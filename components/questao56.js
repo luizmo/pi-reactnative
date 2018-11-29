@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
    },
    opcoes:{
      fontWeight:"bold",
-     fontSize:15,
+     fontSize:25,
      color:"#0b44f5"
       
    }

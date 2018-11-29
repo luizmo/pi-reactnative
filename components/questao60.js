@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, TextInput, ImageBackground, TouchableOpacity, Image, AppRegistry } from 'react-native';
 import { StackNavigator } from 'react-navigation';
-import questaofinal from '.';
+import menu from '.';
 
 class questao60 extends Component{
   static navigationOptions = {
@@ -22,7 +22,7 @@ class questao60 extends Component{
           </Text>
         </View>
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} >
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('menu')} >
             <View style={styles.imagem}>
               <Text style={styles.opcoes}>26</Text>
 
@@ -38,7 +38,7 @@ class questao60 extends Component{
         </View>
 
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao49')} >
+          <TouchableOpacity style={styles.icones} >
             <View style={styles.imagem}>
               <Text style={styles.opcoes} >29</Text>
             </View>

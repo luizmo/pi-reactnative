@@ -22,7 +22,7 @@ class questao59 extends Component{
           </Text>
         </View>
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} >
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao60')} >
             <View style={styles.imagem}>
               <Text style={styles.opcoes}>...I J K L</Text>
 
@@ -38,7 +38,7 @@ class questao59 extends Component{
         </View>
 
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao49')} >
+          <TouchableOpacity style={styles.icones}  >
             <View style={styles.imagem}>
               <Text style={styles.opcoes} >...R S T U</Text>
             </View>
