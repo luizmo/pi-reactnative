@@ -45,7 +45,7 @@ class questoes extends Component{
     if (song != null) {
       song.play((success) =>{
         if(!success)
-        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT); 
+        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT);
       });
     }
   }
@@ -54,7 +54,7 @@ class questoes extends Component{
     if (song3 != null) {
       song3.play((success) =>{
         if(!success)
-        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT); 
+        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT);
       });
     }
   }
@@ -63,7 +63,7 @@ class questoes extends Component{
     if (song4 != null) {
       song4.play((success) =>{
         if(!success)
-        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT); 
+        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT);
       });
     }
   }
@@ -72,7 +72,7 @@ class questoes extends Component{
     if (song5 != null) {
       song5.play((success) =>{
         if(!success)
-        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT); 
+        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT);
       });
     }
   }
@@ -83,9 +83,12 @@ class questoes extends Component{
     const { navigate } = this.props.navigation;
     return (
       <ImageBackground source={require('../img/bg_secu.png')} style={[styles.container,{width:"100%", height:"100%"}]} onLoad={this.onPressButtonPlay.bind(this)}>
+
         <TouchableOpacity style={styles.play} onPress={this.onPressButtonPlay.bind(this)}>
-          <Image  style={styles.player} source={require('../img/player.png')} />
+            <Image  style={styles.player} source={require('../img/player.png')} />
         </TouchableOpacity>
+
+
         <View style={styles.alternativas}>
           <TouchableOpacity style={styles.icones} onPress={this.erro1.bind(this)}>
             <Image  style={styles.imagem} source={require('../img/atividades-6-7/atividade1/a.jpg')} />
@@ -150,15 +153,16 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
   },
-  player: {
+  /*player: {
     width:"100%",
     height:"100%"
-  },
+  },*/
   play: {
     width:"39%",
     height:"39%",
     flex: 1,
     flexDirection: "row",
-    marginLeft:"28%"
+    //marginLeft:"28%"
+      margin:"10%"
    }
 });
