@@ -1,22 +1,21 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, TextInput, ImageBackground, TouchableOpacity, Image, AppRegistry } from 'react-native';
 import { StackNavigator } from 'react-navigation';
-import questao11 from '.';
+import questao7 from '.';
 
 var SoundPlayer = require('react-native-sound');
 var song = null;
 
-class questao10 extends Component{
+ class questao55 extends Component{
   static navigationOptions = {
-    title:'questao10',
+    title:'questao55',
   }
   constructor(props){
     super(props)
-    this.state = { numero10:this.props.navigation.state.params.numero9, pause: false}
-  }
+    }
 
   componentWillMount(){
-    song = new SoundPlayer('questaoconta.mp3', SoundPlayer.MAIN_BUNDLE, (error) => {
+    song = new SoundPlayer('questao6.mp3', SoundPlayer.MAIN_BUNDLE, (error) => {
       if (error)
         ToastAndroid.show('Error when init SoundPlayer :(((', ToastAndroid.SHORT);
     });
@@ -32,59 +31,66 @@ class questao10 extends Component{
   }
 
   render() {
-    const {navigate} = this.props.navigation;
+    const { navigate } = this.props.navigation;
     return (
       <ImageBackground source={require('../img/bg_secu.png')} style={[styles.container,{width:"100%", height:"100%"}]} onLoad={this.onPressButtonPlay.bind(this)}>
         <TouchableOpacity style={styles.play} onPress={this.onPressButtonPlay.bind(this)}>
           <Image  style={styles.player} source={require('../img/player.png')} />
         </TouchableOpacity>
-          <View  style={styles.conta}>
-            <Image source={require('../img/atividades-6-7/atividade10/p4.jpg')} style={styles.contaimg}/>
-          </View>
         <View style={styles.alternativas}>
           <TouchableOpacity style={styles.icones} onPress={()=> ({})}>
-            <Image  style={styles.imagem} source={require('../img/atividades-6-7/atividade10/mm.jpg')} />
+            <Image  style={styles.imagem} source={require('../img/atividades-6-7/atividade6/v.jpg')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao11', {numero10:this.state.numero10 + 1})}>
-            <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade10/nn.jpg')} />
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao7')}>
+            <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade6/w.jpg')} />
           </TouchableOpacity>
         </View>
 
         <View style={styles.alternativas}>
           <TouchableOpacity style={styles.icones} onPress={()=> ({})}>
-            <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade10/oo.jpg')} />
+            <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade6/x.jpg')} />
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.icones} onPress={()=> ({})}>
-            <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade10/pp.jpg')} />
+            <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade6/y.jpg')} />
           </TouchableOpacity>
         </View>
       </ImageBackground>
     );
   }
 }
-
-export default questao10;
+export default questao55;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
+  pergunta: {
+    marginBottom: "10%",
+    alignItems:"center",
+    backgroundColor:"white",
+    borderRadius: 16,
+    marginTop: "8%",
+    marginRight: "8%",
+    marginLeft: "8%",
+    borderWidth:4,
+    borderColor:"purple",
+  },
   texto: {
     fontSize: 35,
     textAlign: "center",
-    color:'purple',
+    color:"purple",
   },
   icones: {
-    width: "40%",
-    height: "90%",
+    width: "46%",
+    height: "75%",
     borderStyle:"solid",
   },
   imagem: {
     width: "100%",
     height: "100%",
-    borderRadius: 45,
+    borderRadius: 65,
     borderWidth:4,
     borderColor:"purple",
   },
@@ -105,12 +111,5 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "row",
     marginLeft:"28%"
-   },
-   conta: {
-    width:"40%",
-    marginLeft:"16%",
-   },
-   contaimg: {
-    borderRadius: 16,
    }
 });

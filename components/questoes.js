@@ -40,7 +40,7 @@ class questoes extends Component{
           <Image  style={styles.player} source={require('../img/player.png')} />
         </TouchableOpacity>
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao2', {numero1:0+0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> ({})}>
             <Image  style={styles.imagem} source={require('../img/atividades-6-7/atividade1/a.jpg')} />
           </TouchableOpacity>
 
@@ -50,11 +50,11 @@ class questoes extends Component{
         </View>
 
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao2',{numero1:0+0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> ({})}>
             <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade1/c.jpg')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao2', {numero1:0+0})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> ({})}>
             <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade1/d.jpg')} />
           </TouchableOpacity>
         </View>
