@@ -3,13 +3,82 @@ import { StyleSheet, Text, View, TextInput, ImageBackground, TouchableOpacity, I
 import { StackNavigator } from 'react-navigation';
 import questao42 from '.';
 
+var SoundPlayer = require('react-native-sound');
+var song = null;
+var song3 = null;
+var song4 = null;
+var song5 = null;
+
+
+
+
 class questao41 extends Component{
   static navigationOptions = {
     title:'questao41',
   }
   constructor(props){
     super(props)
+    this.state = { pause: false }
   }
+
+  componentWillMount(){
+    song = new SoundPlayer('questao40.mp3', SoundPlayer.MAIN_BUNDLE, (error) => {
+      if (error)
+        ToastAndroid.show('Error when init SoundPlayer :(((', ToastAndroid.SHORT);
+    });
+
+    song3 = new SoundPlayer('erro3.mp3', SoundPlayer.MAIN_BUNDLE, (error) => {
+      if (error)
+        ToastAndroid.show('Error when init SoundPlayer :(((', ToastAndroid.SHORT);
+    });
+
+    song4 = new SoundPlayer('erro4.mp3', SoundPlayer.MAIN_BUNDLE, (error) => {
+      if (error)
+        ToastAndroid.show('Error when init SoundPlayer :(((', ToastAndroid.SHORT);
+    });
+
+    song5 = new SoundPlayer('erro5.mp3', SoundPlayer.MAIN_BUNDLE, (error) => {
+      if (error)
+        ToastAndroid.show('Error when init SoundPlayer :(((', ToastAndroid.SHORT);
+    });
+  }
+
+  onPressButtonPlay() {
+    if (song != null) {
+      song.play((success) =>{
+        if(!success)
+        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT);
+      });
+    }
+  }
+
+  erro1() {
+    if (song3 != null) {
+      song3.play((success) =>{
+        if(!success)
+        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT);
+      });
+    }
+  }
+
+  erro2() {
+    if (song4 != null) {
+      song4.play((success) =>{
+        if(!success)
+        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT);
+      });
+    }
+  }
+
+  erro3() {
+    if (song5 != null) {
+      song5.play((success) =>{
+        if(!success)
+        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT);
+      });
+    }
+  }
+
 
   render() {
     const { navigate } = this.props.navigation;
@@ -24,30 +93,38 @@ class questao41 extends Component{
           </Text>
         </View>
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao42')}>
-            <Text>
-              A - F - R- S
-            </Text>
+          <TouchableOpacity style={styles.icones} onPress={this.erro2.bind(this)}>
+          <View style={styles.imagem}>
+              <Text style={styles.ga}>
+                A - F - R- S
+              </Text>
+          </View>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao42')}>
-            <Text>
+          <TouchableOpacity style={styles.icones} onPress={this.erro3.bind(this)}>
+          <View style={styles.imagem}>
+              <Text style={styles.ga}>
               Z - E - R - S
             </Text>
+          </View>
           </TouchableOpacity>
         </View>
 
         <View style={styles.alternativas}>
           <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao42')}>
-            <Text>
-              R - P - O - A
-            </Text>
+            <View style={styles.imagem}>
+                <Text style={styles.ga}>
+                  R - P - O - A
+                  </Text>
+            </View>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao42')}>
-            <Text>
-              R - B - A - O
-            </Text>
+          <TouchableOpacity style={styles.icones} onPress={this.erro1.bind(this)}>
+              <View style={styles.imagem}>
+                  <Text style={styles.ga}>
+                    R - B - A - O
+                  </Text>
+              </View>
           </TouchableOpacity>
         </View>
       </ImageBackground>
@@ -77,14 +154,17 @@ const styles = StyleSheet.create({
   },
   icones: {
     width: "48%",
-    backgroundColor:'#fff',
+    //backgroundColor:'#fff',
     height: "65%",
     borderStyle:"solid",
   },
   imagem: {
     width: "100%",
     height: "100%",
-
+    borderRadius: 50,
+    backgroundColor: "#fff",
+    alignItems:"center",
+    justifyContent:"center",
     borderWidth:4,
     borderColor:"purple",
   },
@@ -107,5 +187,15 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     marginLeft:"28%"
    },
+   gabriel:{
+     width: 290,
+     borderRadius: 5,
+   },
+   ga:{
+     fontWeight:"bold",
+     fontSize:20,
+     color:"purple"
+
+   }
 
 });
