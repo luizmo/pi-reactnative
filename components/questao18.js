@@ -12,7 +12,7 @@ class questao18 extends Component{
   }
   constructor(props){
     super(props)
-    this.state = { numero18:this.props.navigation.state.params.numero17, pause: false}
+    this.state = { pause: false}
   }
 
   componentWillMount(){
@@ -45,7 +45,7 @@ class questao18 extends Component{
             <Text style = {styles.optiontext}>  CRESCENTE  </Text>
           </TouchableOpacity >
           
-          <TouchableOpacity style = {styles.options} onPress={()=> navigate('questao19', {numero18:this.state.numero18 + 1})}>
+          <TouchableOpacity style = {styles.options} onPress={()=> navigate('questao19')}>
           <Text style = {styles.optiontext}>DECRESCENTE</Text>
           </TouchableOpacity>
         </View>

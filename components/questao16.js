@@ -12,7 +12,7 @@ class questao16 extends Component{
   }
   constructor(props){
     super(props)
-    this.state = { numero16:this.props.navigation.state.params.numero15, pause: false}
+    this.state = { pause: false}
   }
 
   componentWillMount(){
@@ -53,7 +53,7 @@ class questao16 extends Component{
             <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade16/zero.jpg')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao17', {numero16:this.state.numero16 + 1})}>
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao17')}>
             <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade16/tres.jpg')} />
           </TouchableOpacity>
         </View>
