@@ -5,7 +5,7 @@ import questao50 from '.';
 
 class questao49 extends Component{
   static navigationOptions = {
-    title:'questao48',
+    title:'questao49',
   }
   constructor(props){
     super(props)
@@ -22,10 +22,9 @@ class questao49 extends Component{
           <Image style={styles.gabriel} source={require('../img/atividades-8-9/quetao48.png')} />
         </View>
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao50')}>
+          <TouchableOpacity style={styles.icones} >
             <View style={styles.imagem}>
               <Text style={styles.ga}> 10-11-23-10 </Text>
-
             </View>
           </TouchableOpacity>
 
@@ -38,7 +37,7 @@ class questao49 extends Component{
         </View>
 
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} >
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao50')}>
             <View style={styles.imagem}>
               <Text style={styles.ga} > 10-11-20-23</Text>
             </View>

@@ -6,7 +6,7 @@ import { menu, questoes, questao2, questao3, questao4, questao5, questao6, quest
   questao19, questao20, questao21, questao22, questao23, questao24, questao25, questao26, questao27, questao28,
   questao29, questao30, questao31, questao32, questao33, questao34, questao36,questao35, questao37, questao38, questao39,questao40,
   questao41, questao42, questao43,questao44,questao45,questao46,questao47,questao48,
-  questao49, resultados, resultados2 } from './components';
+  questao49, questao50, questao51, questao52, questao53, questao54, resultados, resultados2 } from './components';
 
 class App extends Component{
   static navigationOptions = {
@@ -107,6 +107,11 @@ const tela = StackNavigator({
     questao47: {screen: questao47},
     questao48: {screen: questao48},
     questao49: {screen: questao49},
+    questao50: {screen: questao50},
+    questao51: {screen: questao51},
+    questao52: {screen: questao52},
+    questao53: {screen: questao53},
+    questao54: {screen: questao54},
     resultados: {screen: resultados},
 
     resultados2: {screen: resultados2},
