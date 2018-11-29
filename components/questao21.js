@@ -42,17 +42,17 @@ class questao21 extends Component{
             <Image  style={styles.imagem} source={require('../img/atividades-3-4/cao.png')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao22',{numero21:this.state.numero21+0})}>
+          <TouchableOpacity style={styles.icones} >
             <Image style={styles.imagem} source={require('../img/atividades-3-4/turtle.png')} />
           </TouchableOpacity>
         </View>
 
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao22',{numero21:this.state.numero21+0})}>
+          <TouchableOpacity style={styles.icones} >
             <Image style={styles.imagem} source={require('../img/atividades-3-4/peixe.png')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao22', {numero21:this.state.numero21+0})}>
+          <TouchableOpacity style={styles.icones} >
             <Image style={styles.imagem} source={require('../img/atividades-3-4/galinha.png')} />
           </TouchableOpacity>
         </View>

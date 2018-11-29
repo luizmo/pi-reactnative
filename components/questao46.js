@@ -1,66 +1,50 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, TextInput, ImageBackground, TouchableOpacity, Image, AppRegistry } from 'react-native';
 import { StackNavigator } from 'react-navigation';
-import questao28 from '.';
+import questao47 from '.';
 
-var SoundPlayer = require('react-native-sound');
-var song = null;
-
-class questao27 extends Component{
+class questao46 extends Component{
   static navigationOptions = {
-    title:'questao27',
+    title:'questao46',
   }
   constructor(props){
     super(props)
-    this.state = {numero27:this.props.navigation.state.params.numero26, pause:false}
-  }
-  componentWillMount(){
-    song = new SoundPlayer('questao27.mp3', SoundPlayer.MAIN_BUNDLE, (error) => {
-      if (error)
-        ToastAndroid.show('Error when init SoundPlayer :(((', ToastAndroid.SHORT);
-    });
   }
 
-  onPressButtonPlay() {
-    if (song != null) {
-      song.play((success) =>{
-        if(!success)
-        ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT);
-      });
-    }
-  }
   render() {
     const { navigate } = this.props.navigation;
     return (
-      <ImageBackground source={require('../img/bg_secu.png')} style={[styles.container,{width:"100%", height:"100%"}]} onLoad={this.onPressButtonPlay.bind(this)}>
-        <TouchableOpacity style={styles.play} onPress={this.onPressButtonPlay.bind(this)}>
-          <Image  style={styles.player} source={require('../img/player.png')} />
-        </TouchableOpacity>
+      <ImageBackground  source={require('../img/bg_secu.png')} style={[styles.container,{width:"100%", height:"100%"}]}>
+        <View style={styles.pergunta}>
+          <Text style={styles.texto}>
+             Quantos numeros pares a nesta sequencia?
+          </Text>
+          <Image  source={require('../img/atividades-8-9/quetao46.png')} />
+        </View>
         <View style={styles.alternativas}>
           <TouchableOpacity style={styles.icones}>
-            <Image  style={styles.imagem} source={require('../img/atividades-3-4/liquidificador.png')} />
+            <Image  style={styles.imagem} source={require('../img/atividades-8-9/c.png')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao28', {numero27:this.state.numero27 + 1})}>
-            <Image style={styles.imagem} source={require('../img/atividades-3-4/televisao.png')} />
+          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao47')}>
+            <Image style={styles.imagem} source={require('../img/atividades-8-9/d1.png')} />
           </TouchableOpacity>
         </View>
 
         <View style={styles.alternativas}>
           <TouchableOpacity style={styles.icones} >
-            <Image style={styles.imagem} source={require('../img/atividades-3-4/carro.png')} />
+            <Image style={styles.imagem} source={require('../img/atividades-8-9/a.png')} />
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.icones} >
-            <Image style={styles.imagem} source={require('../img/atividades-3-4/pa.png')} />
+            <Image style={styles.imagem} source={require('../img/atividades-8-9/b.png')} />
           </TouchableOpacity>
         </View>
       </ImageBackground>
     );
   }
 }
-export default questao27;
-
+export default questao46;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -82,20 +66,22 @@ const styles = StyleSheet.create({
     color:"purple",
   },
   icones: {
-    width: "46%",
+    width: "48%",
+    //backgroundColor:'#fff',
     height: "65%",
     borderStyle:"solid",
   },
   imagem: {
     width: "100%",
     height: "100%",
-    borderRadius: 65,
+    borderRadius: 50,
     borderWidth:4,
     borderColor:"purple",
   },
   alternativas: {
     marginLeft: "10%",
     marginRight: "10%",
+
     flex: 1,
     flexDirection: "row",
     justifyContent: "space-between",
@@ -110,6 +96,6 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "row",
     marginLeft:"28%"
-   }
+   },
 
 });

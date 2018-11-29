@@ -37,11 +37,11 @@ class questao24 extends Component{
           <Image  style={styles.player} source={require('../img/player.png')} />
         </TouchableOpacity>
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao25', {numero24:this.state.numero24 + 0})}>
+          <TouchableOpacity style={styles.icones}>
             <Image  style={styles.imagem} source={require('../img/atividades-3-4/cobra.png')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao25', {numero24:this.state.numero24 + 0})}>
+          <TouchableOpacity style={styles.icones}>
             <Image style={styles.imagem} source={require('../img/atividades-3-4/elefante.png')} />
           </TouchableOpacity>
         </View>
@@ -51,7 +51,7 @@ class questao24 extends Component{
             <Image style={styles.imagem} source={require('../img/atividades-3-4/cao.png')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao25', {numero24:this.state.numero24 + 0})}>
+          <TouchableOpacity style={styles.icones}>
             <Image style={styles.imagem} source={require('../img/atividades-3-4/tubarao.png')} />
           </TouchableOpacity>
         </View>

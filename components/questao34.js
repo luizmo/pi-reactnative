@@ -42,7 +42,7 @@ class questao34 extends Component{
          </TouchableOpacity>
 
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao35', {numero34:this.state.numero34 + 0})}>
+          <TouchableOpacity style={styles.icones} >
             <Image  style={styles.imagem} source={require('../img/atividades-3-4/hexagano.jpg')} />
           </TouchableOpacity>
 
@@ -52,11 +52,11 @@ class questao34 extends Component{
         </View>
 
         <View style={styles.alternativas}>
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao35', {numero34:this.state.numero34 + 0})}>
+          <TouchableOpacity style={styles.icones} >
             <Image style={styles.imagem} source={require('../img/atividades-3-4/triangulo.jpg')} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.icones} onPress={()=> navigate('questao35', {numero34:this.state.numero34 + 0})}>
+          <TouchableOpacity style={styles.icones} >
             <Image style={styles.imagem} source={require('../img/atividades-3-4/losango.jpg')} />
           </TouchableOpacity>
         </View>
