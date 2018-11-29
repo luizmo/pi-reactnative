@@ -38,19 +38,11 @@ class questao3 extends Component{
           <Image  style={styles.player} source={require('../img/player.png')} />
         </TouchableOpacity>
         <View style={styles.alternativas}>
-<<<<<<< HEAD
-          <TouchableOpacity style={styles.icones} onPress={()=> ({})}>
-            <Image  style={styles.imagem} source={require('../img/atividades-6-7/atividade3/i.jpg')} />
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.icones} onPress={()=> ({})}>
-=======
           <TouchableOpacity style={styles.icones}>
             <Image  style={styles.imagem} source={require('../img/atividades-6-7/atividade3/i.jpg')} />
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.icones}>
->>>>>>> 81c5e28527dbb49263488d24989aa18979f53baf
             <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade3/j.jpg')} />
           </TouchableOpacity>
         </View>
@@ -60,11 +52,7 @@ class questao3 extends Component{
             <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade3/k.jpg')} />
           </TouchableOpacity>
 
-<<<<<<< HEAD
-          <TouchableOpacity style={styles.icones} onPress={()=> ({})}>
-=======
           <TouchableOpacity style={styles.icones}>
->>>>>>> 81c5e28527dbb49263488d24989aa18979f53baf
             <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade3/l.jpg')} />
           </TouchableOpacity>
         </View>

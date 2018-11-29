@@ -42,29 +42,17 @@ class questao8 extends Component{
             <Image source={require('../img/atividades-6-7/atividade8/p2.jpg')} style={styles.contaimg}/>
           </View>
         <View style={styles.alternativas}>
-<<<<<<< HEAD
-          <TouchableOpacity style={styles.icones} onPress={()=> ({})}>
-            <Image  style={styles.imagem} source={require('../img/atividades-6-7/atividade8/dd.jpg')} />
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.icones} onPress={()=> ({})}>
-=======
           <TouchableOpacity style={styles.icones} >
             <Image  style={styles.imagem} source={require('../img/atividades-6-7/atividade8/dd.jpg')} />
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.icones}>
->>>>>>> 81c5e28527dbb49263488d24989aa18979f53baf
             <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade8/ee.jpg')} />
           </TouchableOpacity>
         </View>
 
         <View style={styles.alternativas}>
-<<<<<<< HEAD
-          <TouchableOpacity style={styles.icones} onPress={()=> ({})}>
-=======
           <TouchableOpacity style={styles.icones}>
->>>>>>> 81c5e28527dbb49263488d24989aa18979f53baf
             <Image style={styles.imagem} source={require('../img/atividades-6-7/atividade8/ff.jpg')} />
           </TouchableOpacity>
 
